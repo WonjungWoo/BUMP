@@ -1,0 +1,268 @@
+{
+  "original_render": {
+    "outputs": {
+      "original": {
+        "output": "/tmp/fryingpan_direction_blender_videos_20260925_v2/videos/fryingpan_original_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/source_refined_first70.npz",
+        "human_sha256": "c8bcc95fa2f0ec5f749dc8a5ce9cddae29e74ba1beffe370a0e4a089c3992597",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_clockwise_dynamic_run_v4/backend/before_rollout.npz",
+        "rollout_sha256": "348becb0033fd708ef2dbf9ad2e5e0f65593e4d8e89a101794d239d2105fc1ff",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      },
+      "up_strong_clockwise": {
+        "output": "/tmp/fryingpan_direction_blender_videos_20260925_v2/videos/fryingpan_up_strong_clockwise_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/retarget/up_strong_clockwise_dynamic_run_v4.npz",
+        "human_sha256": "c5541724d051587eb824d7485579f86dcb5c1d073a93e43457323fbb82782f0c",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_clockwise_dynamic_run_v4/backend/after_rollout.npz",
+        "rollout_sha256": "d95c2aa09ac5b269c45a83eb6c337639ea21d68ad9001d141a3f8581f9201a7f",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      },
+      "up_strong_counterclockwise": {
+        "output": "/tmp/fryingpan_direction_blender_videos_20260925_v2/videos/fryingpan_up_strong_counterclockwise_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/retarget/up_strong_counterclockwise_dynamic_run_v1.npz",
+        "human_sha256": "bebf73cf86546032f09b2b174afa7b52d98bdd663bb4371d8228fffa9bda719e",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_counterclockwise_dynamic_run_v1/backend/after_rollout.npz",
+        "rollout_sha256": "a61dc3feadbd8650b5727a77b33f032921160b87bdfc4b60d58519ac8e3f72d6",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      },
+      "up_strong_inside_to_outside": {
+        "output": "/tmp/fryingpan_direction_blender_videos_20260925_v2/videos/fryingpan_up_strong_inside_to_outside_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/retarget/up_strong_inside_to_outside_dynamic_run_v1.npz",
+        "human_sha256": "594e561ebb54a6de19f583ad161af3dc8942c7055de4a76323169c72e69cfae2",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_inside_to_outside_dynamic_run_v1/backend/after_rollout.npz",
+        "rollout_sha256": "c25d0b7d4901a9e3d407672162a433c8718181f81c5d6fb0568393aeef9a09e9",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      },
+      "up_strong_outside_to_inside": {
+        "output": "/tmp/fryingpan_direction_blender_videos_20260925_v2/videos/fryingpan_up_strong_outside_to_inside_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/retarget/up_strong_outside_to_inside_dynamic_run_v1.npz",
+        "human_sha256": "aecf80dfbaa4b46c9d4e96a9ed75ec504a954f36e2eb1944e9ecf6e2ac7ba728",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_outside_to_inside_dynamic_run_v1/backend/after_rollout.npz",
+        "rollout_sha256": "792ed0a93ac7635971281e1b4da3b2b40751cde9b62473cced951e34f240ec20",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      }
+    },
+    "methods": [
+      "original",
+      "up_strong_clockwise",
+      "up_strong_counterclockwise",
+      "up_strong_inside_to_outside",
+      "up_strong_outside_to_inside"
+    ],
+    "frames_each": 70,
+    "fps": 30,
+    "duration_seconds_each": 2.3333333333333335,
+    "render": {
+      "pixels": [
+        1440,
+        1080
+      ],
+      "aspect_ratio": "4:3",
+      "engine": "CYCLES CPU",
+      "cycles_samples": 8,
+      "camera_target": [
+        0.08249545097351074,
+        -0.7740366160869598,
+        0.8592596352100372
+      ],
+      "camera_location": [
+        3.4942715167999268,
+        -5.512614727020264,
+        5.360908508300781
+      ],
+      "camera_ortho_scale": 2.805800199508667,
+      "lighting": "approved InterAct white-fullbody Key/Fill/Rim setup",
+      "fixed_camera_across_all_methods": true,
+      "all_geometry_unclipped": true
+    },
+    "palette": {
+      "driver_srgb": "#F7CAC9",
+      "responder_srgb": "#FAEBCB",
+      "human_base_srgb": "#F9F6FB",
+      "human_derived_srgb_approx": "#F9F4FD",
+      "table_render_role": "responder"
+    },
+    "floor": {
+      "object": "PhysicsCheckerboardFloor_1m",
+      "cell_size_m": 1.0,
+      "extent_m": 40.0,
+      "colors_srgb": {
+        "light": "#ECEEEF",
+        "dark": "#DEE1E3"
+      },
+      "roughness": 0.92,
+      "specular": 0.05
+    }
+  },
+  "material_corrected_render": {
+    "outputs": {
+      "original": {
+        "output": "/tmp/bump-pan-yellow/final_cpu32/fryingpan_original_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/source_refined_first70.npz",
+        "human_sha256": "c8bcc95fa2f0ec5f749dc8a5ce9cddae29e74ba1beffe370a0e4a089c3992597",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_clockwise_dynamic_run_v4/backend/before_rollout.npz",
+        "rollout_sha256": "348becb0033fd708ef2dbf9ad2e5e0f65593e4d8e89a101794d239d2105fc1ff",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      },
+      "up_strong_clockwise": {
+        "output": "/tmp/bump-pan-yellow/final_cpu32/fryingpan_up_strong_clockwise_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/retarget/up_strong_clockwise_dynamic_run_v4.npz",
+        "human_sha256": "c5541724d051587eb824d7485579f86dcb5c1d073a93e43457323fbb82782f0c",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_clockwise_dynamic_run_v4/backend/after_rollout.npz",
+        "rollout_sha256": "d95c2aa09ac5b269c45a83eb6c337639ea21d68ad9001d141a3f8581f9201a7f",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      },
+      "up_strong_counterclockwise": {
+        "output": "/tmp/bump-pan-yellow/final_cpu32/fryingpan_up_strong_counterclockwise_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/retarget/up_strong_counterclockwise_dynamic_run_v1.npz",
+        "human_sha256": "bebf73cf86546032f09b2b174afa7b52d98bdd663bb4371d8228fffa9bda719e",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_counterclockwise_dynamic_run_v1/backend/after_rollout.npz",
+        "rollout_sha256": "a61dc3feadbd8650b5727a77b33f032921160b87bdfc4b60d58519ac8e3f72d6",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      },
+      "up_strong_inside_to_outside": {
+        "output": "/tmp/bump-pan-yellow/final_cpu32/fryingpan_up_strong_inside_to_outside_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/retarget/up_strong_inside_to_outside_dynamic_run_v1.npz",
+        "human_sha256": "594e561ebb54a6de19f583ad161af3dc8942c7055de4a76323169c72e69cfae2",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_inside_to_outside_dynamic_run_v1/backend/after_rollout.npz",
+        "rollout_sha256": "c25d0b7d4901a9e3d407672162a433c8718181f81c5d6fb0568393aeef9a09e9",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      },
+      "up_strong_outside_to_inside": {
+        "output": "/tmp/bump-pan-yellow/final_cpu32/fryingpan_up_strong_outside_to_inside_paper_4x3_1440x1080.mp4",
+        "human": "/tmp/fryingpan_direction_blender_videos_20260925_v2/retarget/up_strong_outside_to_inside_dynamic_run_v1.npz",
+        "human_sha256": "aecf80dfbaa4b46c9d4e96a9ed75ec504a954f36e2eb1944e9ecf6e2ac7ba728",
+        "rollout": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_outside_to_inside_dynamic_run_v1/backend/after_rollout.npz",
+        "rollout_sha256": "792ed0a93ac7635971281e1b4da3b2b40751cde9b62473cced951e34f240ec20",
+        "camera_extent": {
+          "max_abs_normalized_x": 0.4572595464221892,
+          "max_abs_normalized_y": 0.8474577339138637
+        }
+      }
+    },
+    "methods": [
+      "original",
+      "up_strong_clockwise",
+      "up_strong_counterclockwise",
+      "up_strong_inside_to_outside",
+      "up_strong_outside_to_inside"
+    ],
+    "frames_each": 70,
+    "fps": 30,
+    "duration_seconds_each": 2.3333333333333335,
+    "render": {
+      "pixels": [
+        1440,
+        1080
+      ],
+      "aspect_ratio": "4:3",
+      "engine": "CYCLES CPU",
+      "cycles_samples": 8,
+      "camera_target": [
+        0.08249545097351074,
+        -0.7740366160869598,
+        0.8592596352100372
+      ],
+      "camera_location": [
+        3.4942715167999268,
+        -5.512614727020264,
+        5.360908508300781
+      ],
+      "camera_ortho_scale": 2.805800199508667,
+      "lighting": "approved InterAct white-fullbody Key/Fill/Rim setup",
+      "fixed_camera_across_all_methods": true,
+      "all_geometry_unclipped": true
+    },
+    "palette": {
+      "driver_srgb": "#F7CAC9",
+      "responder_srgb": "#FAEBCB",
+      "human_base_srgb": "#F9F6FB",
+      "human_derived_srgb_approx": "#F9F4FD",
+      "table_render_role": "responder"
+    },
+    "floor": {
+      "object": "PhysicsCheckerboardFloor_1m",
+      "cell_size_m": 1.0,
+      "extent_m": 40.0,
+      "colors_srgb": {
+        "light": "#ECEEEF",
+        "dark": "#DEE1E3"
+      },
+      "roughness": 0.92,
+      "specular": 0.05
+    },
+    "material_override": {
+      "object_source_name": "humoto__sideplate",
+      "srgb": "#FAEBCB",
+      "roughness": 0.48,
+      "specular": 0.28,
+      "scope": "render material only; no source mesh, transform, human trajectory, object rollout, camera, lighting, timing, or physics data changed"
+    },
+    "renderer_provenance": {
+      "wrapper": "/media/ssd2/wonjung/documents/chois_release/project_page/tools/render_pan_yellow.py",
+      "wrapper_sha256": "480582512febb690722e468fad01cbd862d389ee6d91ba307ab9b0535c73eaa4",
+      "delegated_producer": "/media/ssd2/wonjung/documents/chois_release/tools/render_fryingpan_direction_videos_blender.py",
+      "delegated_producer_sha256": "3cfe16a658446619dcbdf168c92ef7835d5dd4cc2c843ea08c325ab907918da4",
+      "delegated_style_module": "/media/ssd2/wonjung/documents/chois_release/tools/render_fryingpan_original_vs_official_v3_stills_blender.py",
+      "delegated_style_module_sha256": "a42c580a026dfd0141bd328e2d1ebff929764bb430373a8153c5df4252fea85b",
+      "sideplate_obj": "/media/ssd2/wonjung/documents/chois_release/artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/scene_data_settled/captured_objects/humoto__sideplate_cleaned_simplified.obj",
+      "sideplate_obj_sha256": "591a31d97eb72c41390a0b03d51ec7af55bb4d9f4cc3085e5c358052de03d82e",
+      "cycles_compute_device_requested": "CPU",
+      "cycles_scene_device": "CPU",
+      "actual_engine": "CYCLES CPU",
+      "cycles_settings_delegate": "tools/render_fryingpan_direction_videos_blender.py"
+    }
+  },
+  "original_asset_sha256": {
+    "assets/videos/edit_pan_original.mp4": "d99d18ec2e2d5f0e9ee2b8ad50aa5dca8ac11712f178f4109b17c1a0a237eaed",
+    "assets/videos/edit_pan_clockwise.mp4": "4d904158f5739b72648778ccc49a23395de332b58a3aefaf71eff684e9c19671",
+    "assets/videos/edit_pan_counterclockwise.mp4": "d99ca6aa9b7c0d462041c8e29583b7c9fe253c45ded84b9aa995b14b3cb31bac",
+    "assets/videos/edit_pan_inside_out.mp4": "24f369c012d6649c021c10091b528d67dfbbc37b86b04c5ae109cc1dd58d0855",
+    "assets/videos/edit_pan_outside_in.mp4": "627a16a12c0b947954c1a4433736e196ffaeb49c9c9460147c19206dc205b5ea"
+  },
+  "asset_sha256": {
+    "assets/videos/edit_pan_original_yellow.mp4": "eba87b1b04d0d218ca7ce05d725afd0b5d24372295359b708473b9c665d3cd1e",
+    "assets/videos/edit_pan_original_yellow.webm": "2a5bc4f1f9d6d33cb0bc152b9f4ec21c732729ec3fba35e6f5d18ba587914c85",
+    "assets/images/pan-original-yellow.webp": "09dc19cc235d4c0a1c4e9fa120290ce9003a087eb2193c05dc125a9ecece56ea",
+    "assets/videos/edit_pan_clockwise_yellow.mp4": "5a81e9c3b0ccd18646d38fee985e291fc9ddc354d3e831a14ef135ac20bf817b",
+    "assets/videos/edit_pan_clockwise_yellow.webm": "9a532f55dc37a49f3f1bebff4b551766c680435b158cfff23fffb30e929a99a0",
+    "assets/images/pan-clockwise-yellow.webp": "a4b9d83b3acf9dfd680b363d77c6fc80c360a68f5901eb34edf56b2a6f89acff",
+    "assets/videos/edit_pan_counterclockwise_yellow.mp4": "8d31d644bc84fa606dda196e8c10d77fb2fc3609b242709d8f25d5904752423c",
+    "assets/videos/edit_pan_counterclockwise_yellow.webm": "8638a696b392cfc5ae33c0a9326698a2004184914e2d55d0feea299efbf9e32b",
+    "assets/images/pan-counterclockwise-yellow.webp": "74f45e523afcc71aed92d29dfd92af8784b86c59c1979bdc06135a08a8ef0c1f",
+    "assets/videos/edit_pan_inside_out_yellow.mp4": "0d3f0c3153db3fbd9f52c74f0528159a2fe801324c26eb1fb9f13e833bc449e7",
+    "assets/videos/edit_pan_inside_out_yellow.webm": "aa38df4617fec006f0f12377f9ff57d0b6e026b16344b3f2fa1d0796db4ffaf8",
+    "assets/images/pan-inside-out-yellow.webp": "0b3c3f5d103f2640d5610c2947ed8a63d94c423058048ddbf62f8f9dea526a54",
+    "assets/videos/edit_pan_outside_in_yellow.mp4": "7d2dedf6df27fdcef2ac2867ab50e7815d10720787ed921f88451b92de873434",
+    "assets/videos/edit_pan_outside_in_yellow.webm": "bc1e94c5b9be21b6fee2f4f8d8629ec0ddaddadc5b65a08607749ed0bd5548f7",
+    "assets/images/pan-outside-in-yellow.webp": "bd22dced32179a5dd0c2f4ef423b223aaa6110fe7585ae106503e8854b89c5e5"
+  },
+  "notes": "Full-resolution per-frame source rerender; only sideplate material changed. No video color filtering, image-based animation, motion edits or scientific geometry changes. Previous source clips remain unchanged in supplement. New _yellow asset names prevent stale white-video caches."
+}

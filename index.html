@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="BUMP separates learned human and driver motion from physically simulated responder motion. Explore the method and outcome-conditioned driver editing.">
+  <title>BUMP — Body-Driven Unified Multi-Object Physics for HOI Synthesis</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dataset.css">
+  <script src="assets/data/role-anchors.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="dataset-viewer.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main" class="page">
+    <header class="project-header" id="top">
+      <h1>BUMP<span class="title-dot" aria-hidden="true">.</span></h1>
+      <p class="project-subtitle">Body-Driven Unified Multi-Object<br>Physics for HOI Synthesis</p>
+      <p class="project-authors"><a href="https://wonjungwoo.github.io/" target="_blank" rel="noopener noreferrer"><span class="author-name">Wonjung Woo</span></a><a href="https://www.sshowbiz.xyz/" target="_blank" rel="noopener noreferrer"><span class="author-name">Hyeonwoo Kim</span></a><a href="https://jhugestar.github.io/" target="_blank" rel="noopener noreferrer"><span class="author-name">Hanbyul Joo</span><sup aria-label="Corresponding author">†</sup></a></p>
+      <p class="project-affiliation">Seoul National University <span aria-hidden="true">·</span> <span>† Corresponding author</span></p>
+      <div class="resource-links" aria-label="Project resources">
+        <!-- Replace unavailable buttons with links when publication URLs are verified. -->
+        <button class="resource-link" type="button" disabled title="arXiv link will be added when available"><span class="resource-icon arxiv-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h4l10 18h-4zM5 21h4L19 3h-4z"/></svg></span><span class="resource-label">arXiv</span><span class="resource-note">soon</span></button>
+        <button class="resource-link" type="button" disabled title="Code link will be added when available"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span><span class="resource-label">Code</span><span class="resource-note">soon</span></button>
+        <a class="resource-link is-available" href="#teaser"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3z"/></svg></span><span class="resource-label">Video</span></a>
+      </div>
+      <div class="takeaway" id="takeaway">
+        <p>Learn intentional motion.<br class="mobile-break"> <span>Simulate physical consequences.</span></p>
+        <p class="takeaway-detail">Generate the human and the objects they manipulate. Let physics complete the interaction.</p>
+      </div>
+    </header>
+
+
+    <section class="teaser-section" id="teaser" aria-label="Project teaser">
+      <figure class="teaser" data-video-group>
+        <div class="video-frame video-deck teaser-frame" id="teaser-deck" data-active="tea">
+          <div class="video-layer is-active" data-key="tea" aria-hidden="false"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/teaser-tea-wide.webp" aria-label="A human pours tea, retaining the supplementary clip's selected time interval"><source src="assets/videos/teaser_tea_wide.webm" type="video/webm"><source src="assets/videos/teaser_tea_wide.mp4" type="video/mp4">A human pours tea.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+          <div class="video-layer" data-key="kick" aria-hidden="true" inert><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/teaser-kick-wide.webp" aria-label="A human kicks a basket containing soccer balls"><source src="assets/videos/teaser_kick_wide.webm" type="video/webm"><source src="assets/videos/teaser_kick_wide.mp4" type="video/mp4">A human kicks a basket containing soccer balls.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+          <div class="video-layer" data-key="tray" aria-hidden="true" inert><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/teaser-tray-wide.webp" aria-label="A human carries a pink tray with physically simulated yellow responder objects"><source src="assets/videos/teaser_tray_wide.webm" type="video/webm"><source src="assets/videos/teaser_tray_wide.mp4" type="video/mp4">A human carries a tray with responder objects.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+        </div>
+        <figcaption class="teaser-caption"><span class="role-legend"><span><i class="legend-dot human"></i>Human</span><span data-teaser-driver><i class="legend-dot driver"></i>Driver</span><span><i class="legend-dot responder"></i>Responders</span></span><div class="media-actions"><button class="text-button" type="button" data-replay hidden>↻ Replay</button><button id="motion-toggle" class="text-button" type="button" hidden><span class="motion-icon" aria-hidden="true">Ⅱ</span><span id="motion-label">Pause motion</span></button></div></figcaption>
+        <div class="teaser-navigation" role="group" aria-label="Teaser examples"><button class="teaser-arrow" data-teaser-step="-1" type="button" aria-label="Previous example" aria-controls="teaser-deck" hidden>←</button><p><strong id="teaser-label">Pour tea</strong><span id="teaser-count">01 / 03</span></p><button class="teaser-arrow" data-teaser-step="1" type="button" aria-label="Next example" aria-controls="teaser-deck" hidden>→</button></div>
+        <p class="selection-status" id="teaser-status" role="status" aria-live="polite"></p>
+      </figure>
+    </section>
+    <section class="section text-section" id="abstract" aria-labelledby="abstract-title">
+      <div class="section-heading"><h2 id="abstract-title">Abstract</h2></div>
+      <p class="abstract-text">Generating human-object interactions (HOIs) with multiple objects is challenging because the resulting motions arise from different underlying causes. Human motion reflects semantic intent, intentionally manipulated objects must remain coordinated with the human, while surrounding objects move primarily as physical consequences of contact and collision. We present BUMP, a text-driven framework for multi-object HOI generation based on a simple principle: learn intentional motion and simulate physical consequences. Our method first generates full-body human motion from text and scene context, then predicts trajectories for a small number of intentionally manipulated driver objects conditioned on the human motion. Rather than explicitly generating every moving object, we obtain responder object motions through physics simulation, allowing the framework to handle varying numbers and configurations of surrounding objects without expanding the learned trajectory output space. To address the scarcity of paired full-body multi-object HOI data, we combine heterogeneous supervision from human-only motion, full-body HOI, and hand-centric manipulation data augmented with plausible body motion. We further introduce outcome-conditioned interaction editing, which infers a local modification of the causal driver object trajectory from a desired responder object behavior without requiring an explicit target driver object trajectory. Experiments demonstrate strong performance on both single-object and multi-object HOI benchmarks. Qualitative results showcase diverse scenarios involving inter-object relationships and edits, highlighting the advantage of our unified model formulation.</p>
+    </section>
+    <nav class="section-links" aria-label="Page sections"><a href="#roles">Object roles</a><span aria-hidden="true">/</span><a href="#method">Method</a><span aria-hidden="true">/</span><a href="#dataset">Dataset</a><span aria-hidden="true">/</span><a href="#editing">Driver editing</a></nav>
+    <section class="section" id="roles" aria-labelledby="roles-title">
+      <div class="section-heading"><p class="eyebrow">01 · Human and object roles</p><h2 id="roles-title">Different objects. Different roles.</h2><p>Human motion drives the interaction. Objects respond in two distinct ways.</p></div>
+      <figure class="role-movie" data-video-group data-role-phase="intro">
+        <div class="role-stage">
+          <div class="video-frame video-deck role-scene" id="role-deck" data-active="intro">
+            <div class="video-layer is-active" data-key="intro" aria-hidden="false"><video class="result-video" muted playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/roles-intro-checker.webp" data-callout-start="3.35" aria-label="A white human lifts a pink driver basket containing pale-yellow responder objects"><source src="assets/videos/roles_intro_checker.webm" type="video/webm"><source src="assets/videos/roles_intro_checker.mp4" type="video/mp4">A human lifts the driver basket.</video><p class="media-error" role="status" aria-live="polite" hidden>Scene video unavailable.</p></div>
+            <div class="video-layer" data-key="walk" aria-hidden="true" inert><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/roles-walk-checker.webp" aria-label="The same human walks continuously with the driver basket and its physically responding objects" tabindex="-1"><source src="assets/videos/roles_walk_checker.webm" type="video/webm"><source src="assets/videos/roles_walk_checker.mp4" type="video/mp4">The human walks with the driver basket.</video><p class="media-error" role="status" aria-live="polite" hidden>Walking loop unavailable.</p></div>
+            <svg class="role-callouts" viewBox="0 0 1620 780" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <g data-callout="human"><path d="M360 200 H550 L721 182"/><circle cx="721" cy="182" r="5"/></g>
+              <g data-callout="driver"><path d="M1140 445 H1030 L809 275"/><circle cx="809" cy="275" r="5"/></g>
+              <g data-callout="responder"><path d="M1140 190 H1030 L825 208"/><circle cx="825" cy="208" r="5"/></g>
+            </svg>
+            <div class="role-labels" aria-label="Human and object roles">
+              <p class="role-callout role-human" data-role="human"><strong>Human</strong><span>Generated motion</span><small>White full-body human</small></p>
+              <p class="role-callout role-driver" data-role="driver"><strong>Driver</strong><span>Generated trajectory</span><small>Intentionally manipulated</small></p>
+              <p class="role-callout role-responder" data-role="responder"><strong>Responder</strong><span>Simulated response</span><small>Physically induced</small></p>
+            </div>
+          </div>
+        </div>
+        <figcaption class="demo-caption"><span>HUMOTO sample</span><div class="media-actions"><button class="text-button" data-motion-toggle type="button" hidden>Pause motion</button><button class="text-button" data-replay type="button" hidden>↻ Replay from lift</button></div></figcaption>
+      </figure>
+    </section>
+    <section class="section" id="method" aria-labelledby="method-title">
+      <div class="section-heading"><p class="eyebrow">02 · The method</p><h2 id="method-title">Generate the intent. Simulate the rest.</h2><p>Human and driver motion are learned; responder motion is resolved by physics.</p></div>
+      <figure class="method-figure"><img src="assets/images/method_overview.png" width="3515" height="1138" loading="lazy" alt="The initial human and object scene feeds a human generator, then a driver generator, then a physics simulator. Optional outcome-conditioned editing adjusts the driver and re-simulates responders."></figure>
+      <div class="method-grid" role="tablist" aria-label="Generation stages"><button class="method-step is-active" type="button" role="tab" id="stage-human-tab" aria-selected="true" aria-controls="stage-human-panel" tabindex="0" data-stage="human"><span class="stage-number">Stage 01<span>Learned</span></span><strong>Human motion</strong><span class="stage-description">Text + initial scene → full-body human motion.</span></button>
+<button class="method-step" type="button" role="tab" id="stage-driver-tab" aria-selected="false" aria-controls="stage-driver-panel" tabindex="-1" data-stage="driver"><span class="stage-number">Stage 02<span>Learned</span></span><strong>Driver motion</strong><span class="stage-description">Generated human motion + predicted hand contacts + initial driver objects → driver trajectories.</span></button>
+<button class="method-step" type="button" role="tab" id="stage-physics-tab" aria-selected="false" aria-controls="stage-physics-panel" tabindex="-1" data-stage="physics"><span class="stage-number">Stage 03<span>Simulated</span></span><strong>Physical response</strong><span class="stage-description">Human + drivers + initial responder objects → physically simulated responder motion.</span></button></div>
+      <figure class="process-player" data-video-group>
+        <div class="video-frame video-deck process-deck" id="stage-deck"><div class="video-layer is-active" data-key="human" aria-hidden="false"  role="tabpanel" id="stage-human-panel" aria-labelledby="stage-human-tab"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/process-human.webp" aria-label="Human motion"><source src="assets/videos/process_human.webm" type="video/webm"><source src="assets/videos/process_human.mp4" type="video/mp4">Human motion.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+<div class="video-layer" data-key="driver" aria-hidden="true" inert role="tabpanel" id="stage-driver-panel" aria-labelledby="stage-driver-tab"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/process-driver.webp" aria-label="Driver motion"><source src="assets/videos/process_driver.webm" type="video/webm"><source src="assets/videos/process_driver.mp4" type="video/mp4">Driver motion.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+<div class="video-layer" data-key="physics" aria-hidden="true" inert role="tabpanel" id="stage-physics-panel" aria-labelledby="stage-physics-tab"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/process-physics.webp" aria-label="Physical response"><source src="assets/videos/process_physics.webm" type="video/webm"><source src="assets/videos/process_physics.mp4" type="video/mp4">Physical response.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div></div>
+        <figcaption class="demo-caption"><span id="stage-caption">Stage 01 · Human motion</span><div class="media-actions"><button class="text-button" data-motion-toggle type="button" hidden>Pause motion</button><button class="text-button" data-replay type="button" hidden>↻ Replay stage</button></div></figcaption>
+        <p class="selection-status" id="stage-status" role="status" aria-live="polite"></p>
+      </figure>
+    </section>
+
+    <section class="section" id="dataset" aria-labelledby="dataset-title">
+      <div class="section-heading"><p class="eyebrow">03 · Dataset construction</p><h2 id="dataset-title">From partial observations to full-body interaction.</h2><p>Observed hands and upper bodies become complete, aligned 3D motion.</p></div>
+      <p class="dataset-intro">These are the actual reconstructed TACO and OakInk2 mesh sequences. Opaque surfaces show observed human regions; low-opacity meshes show predicted, unobserved regions. Drag a mesh to inspect it from another angle.</p>
+      <div class="dataset-actions"><button class="copy-button" id="mesh-retry" type="button" hidden>Retry 3D examples</button><span class="role-legend dataset-legend"><span><i class="legend-dot driver"></i>Driver</span><span><i class="legend-dot responder"></i>Responder</span><span><i class="legend-dot observed"></i>Observed human surface</span><span><i class="legend-dot completed"></i>Completed human mesh</span></span></div>
+      <p class="mesh-status" id="mesh-status" role="status" aria-live="polite">Interactive meshes load when this section approaches view.</p>
+      <div class="mesh-grid" id="mesh-grid" aria-label="Reconstructed dataset examples"></div>
+      <noscript><p class="section-note">Enable JavaScript to rotate the reconstructed dataset meshes. TACO observations cover hands and objects; OakInk2 adds upper-body observations. Unobserved body regions are fitted to complete the interaction.</p></noscript>
+    </section>
+
+    <section class="section" id="editing" aria-labelledby="editing-title">
+      <div class="section-heading"><p class="eyebrow">04 · Outcome editing</p><h2 id="editing-title">Outcome-Conditioned Driver Editing</h2><p>Edit driver motion to achieve a desired physical outcome.</p></div>
+      <div class="sample-selector" role="group" aria-label="Editing sample">
+        <button class="sample-button is-active" type="button" data-edit-sample="pan" aria-pressed="true" aria-controls="pan-edit-panel"><img src="assets/images/pan-original-yellow.webp" alt="" width="80" height="60"><span><strong>Frying pan</strong><small>Original + 4 edits</small></span></button>
+        <button class="sample-button" type="button" data-edit-sample="tennis" aria-pressed="false" aria-controls="tennis-edit-panel"><img src="assets/images/tennis-original.webp" alt="" width="80" height="60"><span><strong>Tennis racket</strong><small>Original + 2 edits</small></span></button>
+      </div>
+      <div id="edit-player" data-video-group aria-busy="true" data-active-sample="pan">
+        <p class="gallery-heading" id="edit-summary" aria-live="polite">Frying pan · Original + 4 edits</p>
+<div class="edit-sample-panel" id="pan-edit-panel" data-edit-panel="pan"><div class="edit-gallery pan-gallery">
+<figure class="edit-card original-card" data-clip="pan_original" data-goal="Unedited reference">
+    <figcaption><strong>Original</strong><span>Reference</span></figcaption>
+    <div class="video-frame"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/pan-original-yellow.webp" aria-label="Frying pan · Original"><source src="assets/videos/edit_pan_original_yellow.webm" type="video/webm"><source src="assets/videos/edit_pan_original_yellow.mp4" type="video/mp4">Frying pan · Original.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+    <p class="clip-goal"><span>Reference</span>Unedited reference</p>
+  </figure>
+<figure class="edit-card" data-clip="pan_clockwise" data-goal="Upward motion · strong · clockwise rotation">
+    <figcaption><strong>Clockwise</strong><span>Edited</span></figcaption>
+    <div class="video-frame"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/pan-clockwise-yellow.webp" aria-label="Frying pan · Clockwise"><source src="assets/videos/edit_pan_clockwise_yellow.webm" type="video/webm"><source src="assets/videos/edit_pan_clockwise_yellow.mp4" type="video/mp4">Frying pan · Clockwise.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+    <p class="clip-goal"><span>Requested goal</span>Upward motion · strong · clockwise rotation</p>
+  </figure>
+<figure class="edit-card" data-clip="pan_counterclockwise" data-goal="Upward motion · strong · counter-clockwise rotation">
+    <figcaption><strong>Counter-clockwise</strong><span>Edited</span></figcaption>
+    <div class="video-frame"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/pan-counterclockwise-yellow.webp" aria-label="Frying pan · Counter-clockwise"><source src="assets/videos/edit_pan_counterclockwise_yellow.webm" type="video/webm"><source src="assets/videos/edit_pan_counterclockwise_yellow.mp4" type="video/mp4">Frying pan · Counter-clockwise.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+    <p class="clip-goal"><span>Requested goal</span>Upward motion · strong · counter-clockwise rotation</p>
+  </figure>
+<figure class="edit-card" data-clip="pan_inside_out" data-goal="Upward motion · strong · inside-to-outside rotation">
+    <figcaption><strong>Inside → outside</strong><span>Edited</span></figcaption>
+    <div class="video-frame"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/pan-inside-out-yellow.webp" aria-label="Frying pan · Inside → outside"><source src="assets/videos/edit_pan_inside_out_yellow.webm" type="video/webm"><source src="assets/videos/edit_pan_inside_out_yellow.mp4" type="video/mp4">Frying pan · Inside → outside.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+    <p class="clip-goal"><span>Requested goal</span>Upward motion · strong · inside-to-outside rotation</p>
+  </figure>
+<figure class="edit-card" data-clip="pan_outside_in" data-goal="Upward motion · strong · outside-to-inside rotation">
+    <figcaption><strong>Outside → inside</strong><span>Edited</span></figcaption>
+    <div class="video-frame"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/pan-outside-in-yellow.webp" aria-label="Frying pan · Outside → inside"><source src="assets/videos/edit_pan_outside_in_yellow.webm" type="video/webm"><source src="assets/videos/edit_pan_outside_in_yellow.mp4" type="video/mp4">Frying pan · Outside → inside.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+    <p class="clip-goal"><span>Requested goal</span>Upward motion · strong · outside-to-inside rotation</p>
+  </figure>
+</div></div>
+<div class="edit-sample-panel" id="tennis-edit-panel" data-edit-panel="tennis" hidden inert><div class="edit-gallery tennis-gallery">
+<figure class="edit-card original-card" data-clip="tennis_original" data-goal="Unedited reference">
+    <figcaption><strong>Original</strong><span>Reference</span></figcaption>
+    <div class="video-frame"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/tennis-original.webp" aria-label="Tennis racket · Original"><source src="assets/videos/edit_tennis_original.webm" type="video/webm"><source src="assets/videos/edit_tennis_original.mp4" type="video/mp4">Tennis racket · Original.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+    <p class="clip-goal"><span>Reference</span>Unedited reference</p>
+  </figure>
+<figure class="edit-card" data-clip="tennis_up" data-goal="Upward motion · strong">
+    <figcaption><strong>Up</strong><span>Edited</span></figcaption>
+    <div class="video-frame"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/tennis-up.webp" aria-label="Tennis racket · Up"><source src="assets/videos/edit_tennis_up.webm" type="video/webm"><source src="assets/videos/edit_tennis_up.mp4" type="video/mp4">Tennis racket · Up.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+    <p class="clip-goal"><span>Requested goal</span>Upward motion · strong</p>
+  </figure>
+<figure class="edit-card" data-clip="tennis_down" data-goal="Downward motion · strong">
+    <figcaption><strong>Down</strong><span>Edited</span></figcaption>
+    <div class="video-frame"><video class="result-video" muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="assets/images/tennis-down.webp" aria-label="Tennis racket · Down"><source src="assets/videos/edit_tennis_down.webm" type="video/webm"><source src="assets/videos/edit_tennis_down.mp4" type="video/mp4">Tennis racket · Down.</video><p class="media-error" role="status" aria-live="polite" hidden>Video unavailable. Please try another browser.</p></div>
+    <p class="clip-goal"><span>Requested goal</span>Downward motion · strong</p>
+  </figure>
+</div></div>
+        <div class="editing-toolbar"><div class="media-actions"><button class="text-button" data-motion-toggle type="button" hidden>Pause motion</button><button class="copy-button" data-replay type="button" hidden>↻ Replay all videos</button></div></div>
+        <p class="selection-status" id="edit-status" role="status" aria-live="polite"></p>
+      </div>
+      <noscript><p class="section-note">Enable JavaScript to play or pause these timeline-free clips, switch samples, or replay all videos together.</p></noscript>
+    </section>
+    <section class="section citation-section" id="bibtex" aria-labelledby="bibtex-title">
+      <div class="citation-heading"><h2 id="bibtex-title">BibTeX</h2></div>
+      <p class="section-note citation-placeholder">Coming soon</p>
+    </section>
+    <footer class="footer"><span>BUMP: Body-Driven Unified Multi-Object Physics for HOI Synthesis</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+  </main>
+</body>
+</html>

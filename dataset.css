@@ -1,0 +1,149 @@
+/* Lazy-loaded 3D dataset previews. Kept separate so the baseline page remains light. */
+.dataset-intro {
+  max-width: 720px;
+  margin: -16px auto 24px;
+  color: var(--muted, #606877);
+  text-align: center;
+  font-size: var(--font-size-min);
+  line-height: 1.65;
+}
+.mesh-status {
+  min-height: 20px;
+  margin: 0 0 18px;
+  color: var(--muted, #606877);
+  text-align: center;
+  font-size: var(--font-size-min);
+  line-height: 1.5;
+}
+.mesh-status:empty { display: none; }
+.mesh-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.mesh-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: var(--radius, 10px);
+  background: #fff;
+}
+.mesh-viewport {
+  position: relative;
+  min-height: 250px;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #edf0f3;
+  cursor: grab;
+  outline: none;
+}
+.mesh-viewport:active {
+  cursor: grabbing;
+}
+.mesh-viewport:focus-visible {
+  outline: 2px solid #586781;
+  outline-offset: -4px;
+}
+.mesh-viewport canvas {
+  display: block;
+  width: 100%;
+  height: 250px;
+  touch-action: none;
+}
+.mesh-error,
+.mesh-load-error {
+  display: block;
+  padding: 12px;
+  color: #606877;
+  font-size: var(--font-size-min);
+  line-height: 1.5;
+}
+.mesh-error {
+  position: absolute;
+  inset: auto 10px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.96);
+}
+.mesh-caption {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+.mesh-caption > strong + p {
+  min-height: 3.1em;
+}
+.mesh-caption strong {
+  display: block;
+  font-size: var(--font-size-min);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+.mesh-caption > p {
+  margin: 7px 0 0;
+  color: #606877;
+  font-size: var(--font-size-min);
+  line-height: 1.55;
+}
+.dataset-legend .legend-dot.observed {
+  background: #d6d6e0;
+}
+.dataset-legend .legend-dot.completed {
+  background: rgba(219, 221, 227, 0.126);
+  border-color: rgba(200, 203, 211, 0.45);
+}
+.mesh-time {
+  min-height: 1.3em;
+  margin: 8px 0 0;
+  color: #7a8392;
+  font-size: var(--font-size-min) !important;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+}
+.mesh-reset {
+  align-self: flex-start;
+  min-height: 38px;
+  margin-top: auto;
+  padding: 7px 12px;
+  border: 1px solid #dfe3e8;
+  border-radius: 4px;
+  background: #fff;
+  color: #4e596b;
+  font: inherit;
+  font-size: var(--font-size-min);
+  cursor: pointer;
+}
+.mesh-reset:hover {
+  background: #f7f8fa;
+}
+.mesh-load-error {
+  grid-column: 1 / -1;
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: var(--radius, 10px);
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .mesh-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .mesh-grid {
+    grid-template-columns: 1fr;
+  }
+  .mesh-viewport,
+  .mesh-viewport canvas {
+    min-height: 240px;
+    height: 240px;
+  }
+}
+.mesh-renderer {
+  min-height: 1.3em;
+  color: #687285 !important;
+  font-size: var(--font-size-min) !important;
+}
+.mesh-caption > .mesh-time { margin-bottom: 16px; }
+.mesh-renderer:empty { display: none; }
+.mesh-renderer:not(:empty) { margin-bottom: 16px; }

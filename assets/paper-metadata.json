@@ -1,0 +1,34 @@
+{
+  "title": "BUMP: Body-Driven Unified Multi-Object Physics for HOI Synthesis",
+  "source_file": "_ICLR2027__Multi_object_Interaction-6.pdf",
+  "source_sha256": "27359631031d16d7adb3f93696ce94c9d55393357bdf7eb3d71cab7edf1d64b1",
+  "page": 1,
+  "title_extraction": "pypdf6.20.0 layout; join title lines and restore printed HOI spacing",
+  "authors": [
+    {
+      "name": "Wonjung Woo",
+      "homepage": "https://wonjungwoo.github.io/",
+      "corresponding": false
+    },
+    {
+      "name": "Hyeonwoo Kim",
+      "homepage": "https://www.sshowbiz.xyz/",
+      "corresponding": false
+    },
+    {
+      "name": "Hanbyul Joo",
+      "homepage": "https://jhugestar.github.io/",
+      "corresponding": true
+    }
+  ],
+  "affiliation": "Seoul National University",
+  "authorship_source": "User supplied author order, affiliation and corresponding author. PDF remains anonymous; names are not inferred from it.",
+  "homepage_sources": [
+    "https://jhugestar.github.io/",
+    "https://cse.snu.ac.kr/en/people/faculty/58",
+    "https://wonjungwoo.github.io/",
+    "https://www.sshowbiz.xyz/"
+  ],
+  "homepages_verified": "2026-10-12",
+  "publication_status": "Details pending; no venue, year or paper URL invented."
+}

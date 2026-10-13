@@ -1,0 +1,261 @@
+{
+  "method": "Full sequence decode; 160x90 area-resampled RGB. Blank iff mean>235, std<3, near-white>=235 fraction>.98. Pale scenes retain image variance.",
+  "clips": [
+    {
+      "asset": "assets/videos/edit_pan_clockwise_yellow.mp4",
+      "sha256": "5a81e9c3b0ccd18646d38fee985e291fc9ddc354d3e831a14ef135ac20bf817b",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.606539990934934,
+      "maximum_white_fraction": 0.13965277777777776
+    },
+    {
+      "asset": "assets/videos/edit_pan_clockwise_yellow.webm",
+      "sha256": "9a532f55dc37a49f3f1bebff4b551766c680435b158cfff23fffb30e929a99a0",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.60675409557294,
+      "maximum_white_fraction": 0.14041666666666666
+    },
+    {
+      "asset": "assets/videos/edit_pan_counterclockwise_yellow.mp4",
+      "sha256": "8d31d644bc84fa606dda196e8c10d77fb2fc3609b242709d8f25d5904752423c",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.6184681973428,
+      "maximum_white_fraction": 0.14076388888888888
+    },
+    {
+      "asset": "assets/videos/edit_pan_counterclockwise_yellow.webm",
+      "sha256": "8638a696b392cfc5ae33c0a9326698a2004184914e2d55d0feea299efbf9e32b",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.609884744848816,
+      "maximum_white_fraction": 0.14083333333333334
+    },
+    {
+      "asset": "assets/videos/edit_pan_inside_out_yellow.mp4",
+      "sha256": "0d3f0c3153db3fbd9f52c74f0528159a2fe801324c26eb1fb9f13e833bc449e7",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.604871318508952,
+      "maximum_white_fraction": 0.14048611111111112
+    },
+    {
+      "asset": "assets/videos/edit_pan_inside_out_yellow.webm",
+      "sha256": "aa38df4617fec006f0f12377f9ff57d0b6e026b16344b3f2fa1d0796db4ffaf8",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.605426396903223,
+      "maximum_white_fraction": 0.14104166666666668
+    },
+    {
+      "asset": "assets/videos/edit_pan_original_yellow.mp4",
+      "sha256": "eba87b1b04d0d218ca7ce05d725afd0b5d24372295359b708473b9c665d3cd1e",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.61308491601562,
+      "maximum_white_fraction": 0.1401388888888889
+    },
+    {
+      "asset": "assets/videos/edit_pan_original_yellow.webm",
+      "sha256": "2a5bc4f1f9d6d33cb0bc152b9f4ec21c732729ec3fba35e6f5d18ba587914c85",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.605533641656955,
+      "maximum_white_fraction": 0.1401388888888889
+    },
+    {
+      "asset": "assets/videos/edit_pan_outside_in_yellow.mp4",
+      "sha256": "7d2dedf6df27fdcef2ac2867ab50e7815d10720787ed921f88451b92de873434",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.599227575744465,
+      "maximum_white_fraction": 0.13958333333333334
+    },
+    {
+      "asset": "assets/videos/edit_pan_outside_in_yellow.webm",
+      "sha256": "bc1e94c5b9be21b6fee2f4f8d8629ec0ddaddadc5b65a08607749ed0bd5548f7",
+      "decoded_frames": 70,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 19.59043666745284,
+      "maximum_white_fraction": 0.1401388888888889
+    },
+    {
+      "asset": "assets/videos/edit_tennis_down.mp4",
+      "sha256": "aa2169defc2e3b32772b7368cfa65a082073f1c6a2e6f88a4a6414f7cf7e410a",
+      "decoded_frames": 30,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 25.171630784931693,
+      "maximum_white_fraction": 0.08895833333333333
+    },
+    {
+      "asset": "assets/videos/edit_tennis_down.webm",
+      "sha256": "bbfdaee70ad01aded69799afe6830708af17f98970c13351166b6502ae9777ff",
+      "decoded_frames": 30,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 25.17249624312892,
+      "maximum_white_fraction": 0.08923611111111111
+    },
+    {
+      "asset": "assets/videos/edit_tennis_original.mp4",
+      "sha256": "01973b50137a9e935294d33c7669adc767e4ce0448722f5325be663575f4941f",
+      "decoded_frames": 30,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 25.177629013157574,
+      "maximum_white_fraction": 0.08916666666666667
+    },
+    {
+      "asset": "assets/videos/edit_tennis_original.webm",
+      "sha256": "52f1bfbc34a5d0aeb007135c79b8009d56fd0f47cd0cad8752d4041dc7ac0e53",
+      "decoded_frames": 30,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 25.175471636131444,
+      "maximum_white_fraction": 0.08868055555555555
+    },
+    {
+      "asset": "assets/videos/edit_tennis_up.mp4",
+      "sha256": "118b03a71b2357413259dfed97815d8c53f1bfe600e7c6666d47e9b21e8311bc",
+      "decoded_frames": 30,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 25.164287310777848,
+      "maximum_white_fraction": 0.089375
+    },
+    {
+      "asset": "assets/videos/edit_tennis_up.webm",
+      "sha256": "138628afc83adebf5c641c281c0f07db4e6e077e53332d89a75afd713576733c",
+      "decoded_frames": 30,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 25.16784215880183,
+      "maximum_white_fraction": 0.089375
+    },
+    {
+      "asset": "assets/videos/process_driver.mp4",
+      "sha256": "27427fb5e2294f9054313568865da55c3be322292dda5b3767e1da8400811cc3",
+      "decoded_frames": 120,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 18.668011016069798,
+      "maximum_white_fraction": 0.9254166666666667
+    },
+    {
+      "asset": "assets/videos/process_driver.webm",
+      "sha256": "2bb3b2cb20972a321eb2ee7c7a73214119bc7412dc84c706c3b64a2e1f73dd1b",
+      "decoded_frames": 120,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 18.665604649696313,
+      "maximum_white_fraction": 0.9255555555555556
+    },
+    {
+      "asset": "assets/videos/process_human.mp4",
+      "sha256": "ce21376df70fe7c0a566d1329b853d677eccd9a4f7928fc0d505af374d4e6528",
+      "decoded_frames": 120,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 13.97892686497416,
+      "maximum_white_fraction": 0.9474305555555556
+    },
+    {
+      "asset": "assets/videos/process_human.webm",
+      "sha256": "cbd6c9c602c80d8950a5473ffd98aa4c1b92b4ea3d41fffaf0e569b1899e7fc1",
+      "decoded_frames": 120,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 13.98817362216615,
+      "maximum_white_fraction": 0.9475
+    },
+    {
+      "asset": "assets/videos/process_physics.mp4",
+      "sha256": "3e3a65538506bca123f20d13dddf4cb533e84f46c143b9f74c587af6b0cd0900",
+      "decoded_frames": 120,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 34.638597084987694,
+      "maximum_white_fraction": 0.3159722222222222
+    },
+    {
+      "asset": "assets/videos/process_physics.webm",
+      "sha256": "60385220a6c23160ba0b637823a0824f40a839d9526d640d501809952c61d532",
+      "decoded_frames": 120,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 34.638605886276224,
+      "maximum_white_fraction": 0.31625
+    },
+    {
+      "asset": "assets/videos/roles_intro_checker.mp4",
+      "sha256": "21705fc666732698b33c4e65f7082dcf2db30035b5ba28a1e90e4487ef0b4af3",
+      "decoded_frames": 165,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 35.70892519802763,
+      "maximum_white_fraction": 0.0
+    },
+    {
+      "asset": "assets/videos/roles_intro_checker.webm",
+      "sha256": "7aa2719c17bb7a0ab861b37b26cc62d836381f9923dd9d9af061aca295568127",
+      "decoded_frames": 165,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 35.70550023334752,
+      "maximum_white_fraction": 0.0
+    },
+    {
+      "asset": "assets/videos/roles_walk_checker.mp4",
+      "sha256": "a7c5e8e69b599aeb27c2fb2506741950c6d05850a25415cc2cc07feaa4ce5b54",
+      "decoded_frames": 45,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 37.91190564668094,
+      "maximum_white_fraction": 0.0
+    },
+    {
+      "asset": "assets/videos/roles_walk_checker.webm",
+      "sha256": "e831c4495c4735550b07501bf7230b0414ccc2d2f44b585cd56c4b20e774d240",
+      "decoded_frames": 45,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 37.90828967062897,
+      "maximum_white_fraction": 0.0
+    },
+    {
+      "asset": "assets/videos/teaser_kick_wide.mp4",
+      "sha256": "8e2afd009a014f2a77d5ee7a5358a6721d568cb73d9d6425de26435cb02d8093",
+      "decoded_frames": 329,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 29.84101553355697,
+      "maximum_white_fraction": 0.24395833333333333
+    },
+    {
+      "asset": "assets/videos/teaser_kick_wide.webm",
+      "sha256": "ec9c47608f6ec9b8558545b4314fe6ea54ff0403295691584ea8fdd7fa769cf8",
+      "decoded_frames": 329,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 29.83517412817441,
+      "maximum_white_fraction": 0.24388888888888888
+    },
+    {
+      "asset": "assets/videos/teaser_tea_wide.mp4",
+      "sha256": "fb093c458a7d397add250d5769a0a403339b56ba186b3ebe887003fbcc7fd0ba",
+      "decoded_frames": 108,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 40.203500944813605,
+      "maximum_white_fraction": 0.10201388888888889
+    },
+    {
+      "asset": "assets/videos/teaser_tea_wide.webm",
+      "sha256": "e407635c7e024be5b4549ab0aaafaf78c756de8872a1e6abe9a0ddf77afd160d",
+      "decoded_frames": 108,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 40.20366400460337,
+      "maximum_white_fraction": 0.10222222222222223
+    },
+    {
+      "asset": "assets/videos/teaser_tray_wide.mp4",
+      "sha256": "9285532e24b679ffa07bae5b65ba6a6e27337a15bc78a93a2c8bda75d21d8904",
+      "decoded_frames": 120,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 10.800511890490288,
+      "maximum_white_fraction": 0.0020833333333333333
+    },
+    {
+      "asset": "assets/videos/teaser_tray_wide.webm",
+      "sha256": "e3034e23f54b38dedaae28dd33346380670d3901a419a6949c299940173f6f96",
+      "decoded_frames": 120,
+      "white_blank_frames": [],
+      "minimum_standard_deviation": 10.804959155523807,
+      "maximum_white_fraction": 0.002013888888888889
+    }
+  ]
+}

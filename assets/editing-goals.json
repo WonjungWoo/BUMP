@@ -1,0 +1,51 @@
+{
+  "pan": {
+    "clockwise": {
+      "edit": {
+        "mode": "motion",
+        "direction": "up",
+        "strength": "strong",
+        "rotation": "clockwise"
+      },
+      "source": "../artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_clockwise_dynamic_config_v2.json"
+    },
+    "counterclockwise": {
+      "edit": {
+        "mode": "motion",
+        "direction": "up",
+        "strength": "strong",
+        "rotation": "counterclockwise"
+      },
+      "source": "../artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_counterclockwise_dynamic_config_v1.json"
+    },
+    "inside_to_outside": {
+      "edit": {
+        "mode": "motion",
+        "direction": "up",
+        "strength": "strong",
+        "rotation": "inside_to_outside"
+      },
+      "source": "../artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_inside_to_outside_dynamic_config_v1.json"
+    },
+    "outside_to_inside": {
+      "edit": {
+        "mode": "motion",
+        "direction": "up",
+        "strength": "strong",
+        "rotation": "outside_to_inside"
+      },
+      "source": "../artifacts/fryingpan_driver_editor_up_strong_sbs_20260924/up_strong_outside_to_inside_dynamic_config_v1.json"
+    }
+  },
+  "tennis": {
+    "up": {
+      "direction": "up",
+      "strength": "strong"
+    },
+    "down": {
+      "direction": "down",
+      "strength": "strong"
+    },
+    "source": "../_figures/tennis_racket/tennis_racket_original_up_down_blender_checkerboard_4x3_1280x960_20260926/render_manifest.json"
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "schema": "bump-native-wide-media-v1",
+  "teaser": {
+    "sources": {
+      "tray_source": {
+        "path": "supplement/assets/videos/result_driver_responder_blender.mp4",
+        "sha256": "265bfeef5d8c50f99483d8ea723d14f0a06a9a0e5ff9f056188da098048b4727",
+        "frames": 120,
+        "fps": 30.0,
+        "resolution": [
+          1280,
+          960
+        ]
+      },
+      "basket_source": {
+        "path": "_figures/wovenbasket_soccerball/wovenbasket_soccerball_blender_4x3_1280x960_20260926/wovenbasket_soccerball_paper_4x3_1280x960_60fps_responder_yellow_no_rightfill.mp4",
+        "sha256": "af40f6b9b82cfce77b85076666fce57faa4b55948ef95ef03574ce9fe38df0dd",
+        "frames": 329,
+        "fps": 60.0,
+        "resolution": [
+          1280,
+          960
+        ]
+      },
+      "tea_selected_source": {
+        "path": "supplement/assets/videos/result_teacup.mp4",
+        "sha256": "cd4e65ca976c8092eae1a3cdf50719994cd21b67e5a59211e0eaa824529f8387",
+        "frames": 108,
+        "fps": 30.0,
+        "resolution": [
+          1280,
+          960
+        ]
+      },
+      "tea_full_source": {
+        "path": "_figures/taco_tea/taco_tea_official_v28_checkerboard_fullsequence_4x3_1280x960_400dpi/taco_tea_official_v28_checkerboard_fullsequence_4x3_1280x960_400dpi.mp4",
+        "sha256": "71c64731ba760141e971ee78c2cf3a265b3b9252262626f212b5ff8d67c2788d",
+        "frames": 120,
+        "fps": 30.0,
+        "resolution": [
+          1280,
+          960
+        ]
+      },
+      "tea_human_mesh": {
+        "path": "/tmp/taco_tea_e2_human_mesh.npz",
+        "sha256": "5c56ed306798c56fb30bdc56cf5b2974b72894b0bb58b4dcf0c41c6ebc51bc0b"
+      },
+      "tea_rollout": {
+        "path": "/media/ssd1/wonjung/chois_results_20260925_resume/object_experiment2_official_v28_teapour_20260926/selected_seed20261106_official_v28_raw/mujoco_rollout_kinematic_drivers_v1/physics/mujoco_rollout.npz",
+        "sha256": "21ec35401a9e51da376068765f41678b2a8e3816d3ce726c7d81763eb50d248e"
+      }
+    },
+    "tea_selection_validation": {
+      "full_source_frame_range": [
+        0,
+        107
+      ],
+      "selected_frames": 108,
+      "method": "decoded 160x120 RGB/BGR frame MAE across all candidate contiguous offsets; offset 0 global mean MAE 0.109451, offsets 1..12 range 0.198133..0.789043; landmarks 0,1,20,53,100,107 nearest full indices exactly same."
+    },
+    "wide_projection": {
+      "old_aspect": "4:3",
+      "new_aspect": "16:9",
+      "orthographic_scale_multiplier": 1.3333333333333333,
+      "reason": "preserve original vertical field while rendering additional horizontal scene geometry, no video crop or pad"
+    },
+    "tea_camera": {
+      "view_vector": [
+        0.23516981158222938,
+        -0.9406792463289175,
+        0.24457660404551856
+      ],
+      "target": [
+        -0.003742724657058716,
+        -0.6322577264930612,
+        0.8006120324134827
+      ],
+      "source_ortho_scale": 2.368398904800415,
+      "wide_ortho_scale": 3.1578652064005532
+    },
+    "output_contract": {
+      "resolution": [
+        1440,
+        810
+      ],
+      "tea_frames": 108,
+      "tea_fps": 30,
+      "basket_frames": 329,
+      "basket_fps": 60,
+      "tray_frames": 120,
+      "tray_fps": 30
+    },
+    "outputs": {
+      "tray_wide": {
+        "path": "/tmp/bump-teaser-wide/tray-corrected/tray_wide.mp4",
+        "sha256": "9285532e24b679ffa07bae5b65ba6a6e27337a15bc78a93a2c8bda75d21d8904",
+        "resolution": [
+          1440,
+          810
+        ],
+        "frames": 120,
+        "fps": 30
+      },
+      "tea_wide": {
+        "path": "/tmp/bump-teaser-wide/tea-final/tea_wide.mp4",
+        "sha256": "fb093c458a7d397add250d5769a0a403339b56ba186b3ebe887003fbcc7fd0ba",
+        "resolution": [
+          1440,
+          810
+        ],
+        "frames": 108,
+        "fps": 30,
+        "source_frame_range": [
+          0,
+          107
+        ]
+      },
+      "basket_wide": {
+        "path": "/tmp/bump-teaser-wide/basket-final/basket_wide.mp4",
+        "sha256": "8e2afd009a014f2a77d5ee7a5358a6721d568cb73d9d6425de26435cb02d8093",
+        "resolution": [
+          1440,
+          810
+        ],
+        "frames": 329,
+        "fps": 60
+      }
+    },
+    "verification": {
+      "method": "ffprobe native encoded output; required dimensions/frame counts/fps all observed after renderer exit",
+      "basket_producer_manifest": "/tmp/bump-teaser-wide/basket-final/basket_wide.json"
+    }
+  },
+  "roles": {
+    "audit_asset": "assets/roles-render-manifest.json",
+    "numerical_validation_asset": "assets/role-loop-validation.json",
+    "source": {
+      "retained_archive": "/media/ssd2/wonjung/documents/chois_release/_figures/humoto_trashcan_wovenbasket/humoto_trashcan_wovenbasket_personfront_insideyellow_intro_and_walkloop_640x480_20260926/periodic_loop_meshes_250_285.npz",
+      "retained_archive_sha256": "706227b65940038ab1482f4398ab4c2e733801e97b5e80a6a002181bd7c41c7e",
+      "recovered_original_archive": "/tmp/bump-checker-loop-analysis/original_recovered_4272.npz",
+      "recovered_original_archive_sha256": "72aa9947fbe816f8e35d0f32b473e3bd775d5a6e9bd48d0ebe8442166f03c01a",
+      "groundfix_dataset": "/media/ssd2/wonjung/data/processed_data_comb_half_groundfix_v1/train_diffusion_manip_seq_joints24_smplh.p",
+      "groundfix_dataset_sha256": "7f16d36917a70ff947a6dccce978c4e759d85e610d027ef1a70c0c4799989e14",
+      "historical_original_key": 4272,
+      "recovery_source_fixed_key": 4268,
+      "recovery_formula": "original=A+s*(fixed-A); applied translation to all exported human/joint/object vertices",
+      "retained_exact_range_inclusive": [
+        0,
+        249
+      ],
+      "original_full_frame_count": 300
+    },
+    "motion_integrity": {
+      "source_archives_changed": false,
+      "mesh_topology_changed": false,
+      "horizontal_root_motion_removed": false,
+      "derived_periodic_vertex_corrections": true,
+      "source_physics_rerun": false,
+      "resampling": false,
+      "intro": "Original source120\u2013219 byte-exact; complete120\u2013249 source pose/timing/relative geometry preserved, with only common groupZ ground registration eased after220",
+      "lead": "Recovered original250\u2013284 continuation; original SMPL reconstruction tolerance\u2264.781mm, plus common groupZ ground registration",
+      "loop": "Derived source240\u2013285 cycle;45 played frames, unplayed closure sample210; position/velocity/camera close under1m static-checker forward advance",
+      "ground_registration_m": {
+        "intro": [
+          -0.0197376795,
+          0
+        ],
+        "loop": [
+          -0.0376578607,
+          -0.00829656795
+        ]
+      },
+      "ground_registration": "Common per-frame vertical translation of human/joints/allobjects; relative grasp and topology unchanged. Lowest supporting semantic sole2mm above original fixed floor"
+    },
+    "render": {
+      "engine": "CYCLES_CPU",
+      "samples": 32,
+      "threads": "24\u219248 intro;24 walk (execution only, same32spp/denoiser)",
+      "denoising": true,
+      "resolution": [
+        1620,
+        780
+      ],
+      "fps": 30,
+      "palette": {
+        "human": "#F9F6FB",
+        "driver": "#F7CAC9",
+        "responder": "#FAEBCB",
+        "checker_light": "#343A43",
+        "checker_dark": "#1D222A",
+        "background": "#090C12"
+      },
+      "thread_execution": {
+        "intro": {
+          "previous_threads": 24,
+          "resume_threads": 48,
+          "completed_previous_frames": [
+            "frame_0000.png",
+            "frame_0001.png",
+            "frame_0002.png",
+            "frame_0003.png",
+            "frame_0004.png",
+            "frame_0005.png",
+            "frame_0006.png",
+            "frame_0007.png",
+            "frame_0008.png",
+            "frame_0009.png",
+            "frame_0010.png",
+            "frame_0011.png",
+            "frame_0012.png",
+            "frame_0013.png",
+            "frame_0014.png",
+            "frame_0015.png",
+            "frame_0016.png",
+            "frame_0017.png",
+            "frame_0018.png",
+            "frame_0019.png",
+            "frame_0020.png",
+            "frame_0021.png",
+            "frame_0022.png",
+            "frame_0023.png",
+            "frame_0024.png",
+            "frame_0025.png",
+            "frame_0026.png",
+            "frame_0027.png",
+            "frame_0028.png",
+            "frame_0029.png",
+            "frame_0030.png",
+            "frame_0031.png",
+            "frame_0032.png",
+            "frame_0033.png",
+            "frame_0034.png",
+            "frame_0035.png",
+            "frame_0036.png",
+            "frame_0037.png",
+            "frame_0038.png",
+            "frame_0039.png",
+            "frame_0040.png",
+            "frame_0041.png",
+            "frame_0042.png",
+            "frame_0043.png",
+            "frame_0044.png",
+            "frame_0045.png",
+            "frame_0046.png",
+            "frame_0047.png",
+            "frame_0048.png",
+            "frame_0049.png",
+            "frame_0050.png",
+            "frame_0051.png",
+            "frame_0052.png",
+            "frame_0053.png",
+            "frame_0054.png",
+            "frame_0055.png",
+            "frame_0056.png",
+            "frame_0057.png",
+            "frame_0058.png",
+            "frame_0059.png",
+            "frame_0060.png",
+            "frame_0061.png",
+            "frame_0062.png",
+            "frame_0063.png",
+            "frame_0064.png",
+            "frame_0065.png",
+            "frame_0066.png",
+            "frame_0067.png",
+            "frame_0068.png",
+            "frame_0069.png",
+            "frame_0070.png",
+            "frame_0071.png",
+            "frame_0072.png",
+            "frame_0073.png",
+            "frame_0074.png",
+            "frame_0075.png",
+            "frame_0076.png",
+            "frame_0077.png",
+            "frame_0078.png",
+            "frame_0079.png",
+            "frame_0080.png"
+          ],
+          "reason": "Increase only owned render concurrency after other local processes reduced throughput; identical camera/material/timeline/sampling input fingerprint retained"
+        },
+        "walk": {
+          "threads": 24
+        }
+      }
+    },
+    "pixel_render_script_sha256": "9983f8e6b89b14586152798f160c453adb3913970978e090df1e2fc6ac864128",
+    "original_scene": "Sourcefrontyaw\u221290/elevation7.5/height/verticalFoV; originaldarklighting/materials/0.5m checkerboard restored"
+  },
+  "delivery": {
+    "teaser_tray_wide": {
+      "source_frame_range": [
+        0,
+        119
+      ],
+      "frames": 120,
+      "fps": 30,
+      "resolution": [
+        1440,
+        810
+      ],
+      "mesh_motion_altered": false,
+      "crop_or_padding": false,
+      "horizontal_projection_multiplier": 1.3333333333333333,
+      "vertical_view_preserved": true,
+      "camera_extrinsics_preserved": true,
+      "encodings": {
+        "mp4": {
+          "asset": "assets/videos/teaser_tray_wide.mp4",
+          "sha256": "9285532e24b679ffa07bae5b65ba6a6e27337a15bc78a93a2c8bda75d21d8904"
+        },
+        "webm": {
+          "asset": "assets/videos/teaser_tray_wide.webm",
+          "sha256": "e3034e23f54b38dedaae28dd33346380670d3901a419a6949c299940173f6f96"
+        }
+      }
+    },
+    "teaser_kick_wide": {
+      "source_frame_range": [
+        0,
+        328
+      ],
+      "frames": 329,
+      "fps": 60,
+      "resolution": [
+        1440,
+        810
+      ],
+      "mesh_motion_altered": false,
+      "crop_or_padding": false,
+      "horizontal_projection_multiplier": 1.3333333333333333,
+      "vertical_view_preserved": true,
+      "camera_extrinsics_preserved": true,
+      "encodings": {
+        "mp4": {
+          "asset": "assets/videos/teaser_kick_wide.mp4",
+          "sha256": "8e2afd009a014f2a77d5ee7a5358a6721d568cb73d9d6425de26435cb02d8093"
+        },
+        "webm": {
+          "asset": "assets/videos/teaser_kick_wide.webm",
+          "sha256": "ec9c47608f6ec9b8558545b4314fe6ea54ff0403295691584ea8fdd7fa769cf8"
+        }
+      }
+    },
+    "teaser_tea_wide": {
+      "source_frame_range": [
+        0,
+        107
+      ],
+      "frames": 108,
+      "fps": 30,
+      "resolution": [
+        1440,
+        810
+      ],
+      "mesh_motion_altered": false,
+      "crop_or_padding": false,
+      "horizontal_projection_multiplier": 1.3333333333333333,
+      "vertical_view_preserved": true,
+      "camera_extrinsics_preserved": true,
+      "encodings": {
+        "mp4": {
+          "asset": "assets/videos/teaser_tea_wide.mp4",
+          "sha256": "fb093c458a7d397add250d5769a0a403339b56ba186b3ebe887003fbcc7fd0ba"
+        },
+        "webm": {
+          "asset": "assets/videos/teaser_tea_wide.webm",
+          "sha256": "e407635c7e024be5b4549ab0aaafaf78c756de8872a1e6abe9a0ddf77afd160d"
+        }
+      }
+    },
+    "roles_intro_checker": {
+      "source_frame_range": [
+        120,
+        284
+      ],
+      "frames": 165,
+      "fps": 30,
+      "resolution": [
+        1620,
+        780
+      ],
+      "mesh_motion_altered": true,
+      "crop_or_padding": false,
+      "original_front_view_preserved": true,
+      "samples": 32,
+      "denoising": true,
+      "encodings": {
+        "mp4": {
+          "asset": "assets/videos/roles_intro_checker.mp4",
+          "sha256": "21705fc666732698b33c4e65f7082dcf2db30035b5ba28a1e90e4487ef0b4af3"
+        },
+        "webm": {
+          "asset": "assets/videos/roles_intro_checker.webm",
+          "sha256": "7aa2719c17bb7a0ab861b37b26cc62d836381f9923dd9d9af061aca295568127"
+        }
+      }
+    },
+    "roles_walk_checker": {
+      "source_frame_range": [
+        240,
+        285
+      ],
+      "frames": 45,
+      "fps": 30,
+      "resolution": [
+        1620,
+        780
+      ],
+      "mesh_motion_altered": true,
+      "crop_or_padding": false,
+      "original_front_view_preserved": true,
+      "samples": 32,
+      "denoising": true,
+      "encodings": {
+        "mp4": {
+          "asset": "assets/videos/roles_walk_checker.mp4",
+          "sha256": "a7c5e8e69b599aeb27c2fb2506741950c6d05850a25415cc2cc07feaa4ce5b54"
+        },
+        "webm": {
+          "asset": "assets/videos/roles_walk_checker.webm",
+          "sha256": "e831c4495c4735550b07501bf7230b0414ccc2d2f44b585cd56c4b20e774d240"
+        }
+      }
+    }
+  }
+}

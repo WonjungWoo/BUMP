@@ -1,0 +1,12 @@
+{
+  "source_file": "_ICLR2027__Multi_object_Interaction-6.pdf",
+  "source_sha256": "27359631031d16d7adb3f93696ce94c9d55393357bdf7eb3d71cab7edf1d64b1",
+  "page": 1,
+  "extraction": "pypdf 6.20.0, layout text; temporary reader only, no project dependency",
+  "normalization": [
+    "remove page line numbers and layout whitespace",
+    "join printed full-body/single-object across linebreaks",
+    "restore spacing around italic driver/responder object terminology"
+  ],
+  "abstract": "Generating human-object interactions (HOIs) with multiple objects is challenging because the resulting motions arise from different underlying causes. Human motion reflects semantic intent, intentionally manipulated objects must remain coordinated with the human, while surrounding objects move primarily as physical consequences of contact and collision. We present BUMP, a text-driven framework for multi-object HOI generation based on a simple principle: learn intentional motion and simulate physical consequences. Our method first generates full-body human motion from text and scene context, then predicts trajectories for a small number of intentionally manipulated driver objects conditioned on the human motion. Rather than explicitly generating every moving object, we obtain responder object motions through physics simulation, allowing the framework to handle varying numbers and configurations of surrounding objects without expanding the learned trajectory output space. To address the scarcity of paired full-body multi-object HOI data, we combine heterogeneous supervision from human-only motion, full-body HOI, and hand-centric manipulation data augmented with plausible body motion. We further introduce outcome-conditioned interaction editing, which infers a local modification of the causal driver object trajectory from a desired responder object behavior without requiring an explicit target driver object trajectory. Experiments demonstrate strong performance on both single-object and multi-object HOI benchmarks. Qualitative results showcase diverse scenarios involving inter-object relationships and edits, highlighting the advantage of our unified model formulation."
+}

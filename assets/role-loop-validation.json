@@ -1,0 +1,127 @@
+{
+  "boundary": {
+    "human_vertices": {
+      "position_max_m": 1.1920928955078125e-07,
+      "velocity_max_mpf": 2.384185791015625e-07,
+      "handoff_velocity_max_mpf": 5.960464477539063e-08
+    },
+    "joints24": {
+      "position_max_m": 1.1920928955078125e-07,
+      "velocity_max_mpf": 2.384185791015625e-07,
+      "handoff_velocity_max_mpf": 0.0
+    },
+    "object_0_vertices": {
+      "position_max_m": 1.1920928955078125e-07,
+      "velocity_max_mpf": 2.384185791015625e-07,
+      "handoff_velocity_max_mpf": 0.0
+    },
+    "object_1_vertices": {
+      "position_max_m": 1.1920928955078125e-07,
+      "velocity_max_mpf": 2.384185791015625e-07,
+      "handoff_velocity_max_mpf": 0.0
+    },
+    "object_2_vertices": {
+      "position_max_m": 1.1920928955078125e-07,
+      "velocity_max_mpf": 2.384185791015625e-07,
+      "handoff_velocity_max_mpf": 5.960464477539063e-08
+    },
+    "camera_targets": {
+      "position_max_m": 1.1920928955078125e-07,
+      "velocity_max_mpf": 2.384185791015625e-07,
+      "handoff_velocity_max_mpf": 0.0
+    }
+  },
+  "frame_counts": {
+    "intro": 165,
+    "walk": 45
+  },
+  "walking_support_sole_gap_m": {
+    "min": 0.0020000040531158447,
+    "max": 0.0020000040531158447
+  },
+  "walking_root_step_max_m": 0.030592219904065132,
+  "lift_common_ground_registration_m": {
+    "min": -0.008462786674499512,
+    "max": 0.0
+  },
+  "original_lift_prefix_120_219_unchanged": true,
+  "source_topology_unchanged": true,
+  "lift_relative_geometry_max_m": {
+    "human_vertices": 5.960464477539063e-08,
+    "joints24": 5.960464477539063e-08,
+    "object_0_vertices": 5.960464477539063e-08,
+    "object_1_vertices": 5.960464477539063e-08,
+    "object_2_vertices": 5.960464477539063e-08
+  },
+  "status": "pass",
+  "native_pixels": {
+    "native_resolution": [
+      1620,
+      780
+    ],
+    "closure_whole_mae_255": 0.014657592064999472,
+    "closure_floor_mae_255": 0.003832304526748971,
+    "closure_max_channel_difference": 25.0
+  },
+  "preview_pixels": {
+    "floor_closure_mae_255": 0.0037885802469135805,
+    "whole_closure_mae_255": 0.024389838556505224,
+    "loop_boundary_mae_255": 0.4804202279202279,
+    "regular_step_p95_mae_255": 0.7474448005698006,
+    "handoff_step_mae_255": 0.48023741690408356,
+    "inspected_repeat_boundaries": 2
+  },
+  "unplayed_closure_frame": 210,
+  "reproduction": {
+    "status": "pass",
+    "reproduction_max_abs_m": 2.384185791015625e-07,
+    "tolerance_m": 5e-07,
+    "all_topology_byte_equal": true,
+    "members": {
+      "human_vertices": {
+        "byte_equal": false,
+        "max_abs_difference": 2.384185791015625e-07
+      },
+      "joints24": {
+        "byte_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "object_0_vertices": {
+        "byte_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "object_1_vertices": {
+        "byte_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "object_2_vertices": {
+        "byte_equal": false,
+        "max_abs_difference": 5.960464477539063e-08
+      },
+      "camera_targets": {
+        "byte_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "floor_xy": {
+        "byte_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "human_faces": {
+        "byte_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "object_0_faces": {
+        "byte_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "object_1_faces": {
+        "byte_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "object_2_faces": {
+        "byte_equal": true,
+        "max_abs_difference": 0.0
+      }
+    }
+  }
+}

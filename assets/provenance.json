@@ -1,0 +1,319 @@
+[
+  {
+    "asset": "assets/videos/edit_pan_original_yellow.mp4",
+    "source": "assets/pan-render-manifest.json",
+    "sha256": "eba87b1b04d0d218ca7ce05d725afd0b5d24372295359b708473b9c665d3cd1e",
+    "transformation": "Full Blender Cycles CPU material-only rerender from the exact original human/object sources: humoto__sideplate #FAEBCB; all motion, topology, camera, lighting, 8 samples, 70 frames and 30fps preserved. Source fingerprints and renderer audit are in the manifest."
+  },
+  {
+    "asset": "assets/videos/edit_pan_clockwise_yellow.mp4",
+    "source": "assets/pan-render-manifest.json",
+    "sha256": "5a81e9c3b0ccd18646d38fee985e291fc9ddc354d3e831a14ef135ac20bf817b",
+    "transformation": "Full Blender Cycles CPU material-only rerender from the exact original human/object sources: humoto__sideplate #FAEBCB; all motion, topology, camera, lighting, 8 samples, 70 frames and 30fps preserved. Source fingerprints and renderer audit are in the manifest."
+  },
+  {
+    "asset": "assets/videos/edit_pan_inside_out_yellow.mp4",
+    "source": "assets/pan-render-manifest.json",
+    "sha256": "0d3f0c3153db3fbd9f52c74f0528159a2fe801324c26eb1fb9f13e833bc449e7",
+    "transformation": "Full Blender Cycles CPU material-only rerender from the exact original human/object sources: humoto__sideplate #FAEBCB; all motion, topology, camera, lighting, 8 samples, 70 frames and 30fps preserved. Source fingerprints and renderer audit are in the manifest."
+  },
+  {
+    "asset": "assets/videos/edit_tennis_original.mp4",
+    "source": "../supplement/assets/videos/edit_tennis_original.mp4",
+    "sha256": "01973b50137a9e935294d33c7669adc767e4ce0448722f5325be663575f4941f",
+    "transformation": "none"
+  },
+  {
+    "asset": "assets/videos/edit_tennis_up.mp4",
+    "source": "../supplement/assets/videos/edit_tennis_up.mp4",
+    "sha256": "118b03a71b2357413259dfed97815d8c53f1bfe600e7c6666d47e9b21e8311bc",
+    "transformation": "none"
+  },
+  {
+    "asset": "assets/images/method_overview.png",
+    "source": "../supplement/assets/figures/method_overview.png",
+    "sha256": "5d76495ca37b83938a207b2d2e6c20cdf2ee973168b815181998b8ac13dd5816",
+    "transformation": "none"
+  },
+  {
+    "asset": "assets/images/pan-original-yellow.webp",
+    "source": "assets/videos/edit_pan_original_yellow.mp4",
+    "transformation": "Video still at 0.4s; resized to 960px wide; no geometry or color changes.",
+    "sha256": "09dc19cc235d4c0a1c4e9fa120290ce9003a087eb2193c05dc125a9ecece56ea"
+  },
+  {
+    "asset": "assets/images/pan-clockwise-yellow.webp",
+    "source": "assets/videos/edit_pan_clockwise_yellow.mp4",
+    "transformation": "Video still at 0.4s; resized to 960px wide; no geometry or color changes.",
+    "sha256": "a4b9d83b3acf9dfd680b363d77c6fc80c360a68f5901eb34edf56b2a6f89acff"
+  },
+  {
+    "asset": "assets/images/pan-inside-out-yellow.webp",
+    "source": "assets/videos/edit_pan_inside_out_yellow.mp4",
+    "transformation": "Video still at 0.4s; resized to 960px wide; no geometry or color changes.",
+    "sha256": "0b3c3f5d103f2640d5610c2947ed8a63d94c423058048ddbf62f8f9dea526a54"
+  },
+  {
+    "asset": "assets/images/tennis-original.webp",
+    "source": "assets/videos/edit_tennis_original.mp4",
+    "transformation": "Video still at 0.4s; resized to 960px wide; no geometry or color changes."
+  },
+  {
+    "asset": "assets/images/tennis-up.webp",
+    "source": "assets/videos/edit_tennis_up.mp4",
+    "transformation": "Video still at 0.4s; resized to 960px wide; no geometry or color changes."
+  },
+  {
+    "asset": "assets/videos/edit_pan_clockwise_yellow.webm",
+    "source": "assets/videos/edit_pan_clockwise_yellow.mp4",
+    "sha256": "9a532f55dc37a49f3f1bebff4b551766c680435b158cfff23fffb30e929a99a0",
+    "transformation": "VP9/WebM compatibility transcode of the exact source sequence; no resizing, cropping, timing, geometry or color edits."
+  },
+  {
+    "asset": "assets/videos/edit_pan_inside_out_yellow.webm",
+    "source": "assets/videos/edit_pan_inside_out_yellow.mp4",
+    "sha256": "aa38df4617fec006f0f12377f9ff57d0b6e026b16344b3f2fa1d0796db4ffaf8",
+    "transformation": "VP9/WebM compatibility transcode of the exact source sequence; no resizing, cropping, timing, geometry or color edits."
+  },
+  {
+    "asset": "assets/videos/edit_pan_original_yellow.webm",
+    "source": "assets/videos/edit_pan_original_yellow.mp4",
+    "sha256": "2a5bc4f1f9d6d33cb0bc152b9f4ec21c732729ec3fba35e6f5d18ba587914c85",
+    "transformation": "VP9/WebM compatibility transcode of the exact source sequence; no resizing, cropping, timing, geometry or color edits."
+  },
+  {
+    "asset": "assets/videos/edit_tennis_original.webm",
+    "source": "assets/videos/edit_tennis_original.mp4",
+    "sha256": "52f1bfbc34a5d0aeb007135c79b8009d56fd0f47cd0cad8752d4041dc7ac0e53",
+    "transformation": "VP9/WebM compatibility transcode of the exact source sequence; no resizing, cropping, timing, geometry or color edits."
+  },
+  {
+    "asset": "assets/videos/edit_tennis_up.webm",
+    "source": "assets/videos/edit_tennis_up.mp4",
+    "sha256": "138628afc83adebf5c641c281c0f07db4e6e077e53332d89a75afd713576733c",
+    "transformation": "VP9/WebM compatibility transcode of the exact source sequence; no resizing, cropping, timing, geometry or color edits."
+  },
+  {
+    "asset": "assets/videos/process_human.mp4",
+    "source": "../supplement/assets/videos/process_human.mp4",
+    "sha256": "ce21376df70fe7c0a566d1329b853d677eccd9a4f7928fc0d505af374d4e6528",
+    "transformation": "none"
+  },
+  {
+    "asset": "assets/videos/process_human.webm",
+    "source": "assets/videos/process_human.mp4",
+    "sha256": "cbd6c9c602c80d8950a5473ffd98aa4c1b92b4ea3d41fffaf0e569b1899e7fc1",
+    "transformation": "VP9/WebM compatibility transcode; frames, dimensions and timing preserved."
+  },
+  {
+    "asset": "assets/images/process-human.webp",
+    "source": "assets/videos/process_human.mp4",
+    "transformation": "Still at 0.4s, resized to 960px wide without cropping or content edits."
+  },
+  {
+    "asset": "assets/videos/process_driver.mp4",
+    "source": "../supplement/assets/videos/process_driver.mp4",
+    "sha256": "27427fb5e2294f9054313568865da55c3be322292dda5b3767e1da8400811cc3",
+    "transformation": "none"
+  },
+  {
+    "asset": "assets/videos/process_driver.webm",
+    "source": "assets/videos/process_driver.mp4",
+    "sha256": "2bb3b2cb20972a321eb2ee7c7a73214119bc7412dc84c706c3b64a2e1f73dd1b",
+    "transformation": "VP9/WebM compatibility transcode; frames, dimensions and timing preserved."
+  },
+  {
+    "asset": "assets/images/process-driver.webp",
+    "source": "assets/videos/process_driver.mp4",
+    "transformation": "Still at 0.4s, resized to 960px wide without cropping or content edits."
+  },
+  {
+    "asset": "assets/videos/process_physics.mp4",
+    "source": "../supplement/assets/videos/process_physics.mp4",
+    "sha256": "3e3a65538506bca123f20d13dddf4cb533e84f46c143b9f74c587af6b0cd0900",
+    "transformation": "none"
+  },
+  {
+    "asset": "assets/videos/process_physics.webm",
+    "source": "assets/videos/process_physics.mp4",
+    "sha256": "60385220a6c23160ba0b637823a0824f40a839d9526d640d501809952c61d532",
+    "transformation": "VP9/WebM compatibility transcode; frames, dimensions and timing preserved."
+  },
+  {
+    "asset": "assets/images/process-physics.webp",
+    "source": "assets/videos/process_physics.mp4",
+    "transformation": "Still at 0.4s, resized to 960px wide without cropping or content edits."
+  },
+  {
+    "asset": "assets/videos/edit_pan_counterclockwise_yellow.mp4",
+    "source": "assets/pan-render-manifest.json",
+    "sha256": "8d31d644bc84fa606dda196e8c10d77fb2fc3609b242709d8f25d5904752423c",
+    "transformation": "Full Blender Cycles CPU material-only rerender from the exact original human/object sources: humoto__sideplate #FAEBCB; all motion, topology, camera, lighting, 8 samples, 70 frames and 30fps preserved. Source fingerprints and renderer audit are in the manifest."
+  },
+  {
+    "asset": "assets/videos/edit_pan_counterclockwise_yellow.webm",
+    "source": "assets/videos/edit_pan_counterclockwise_yellow.mp4",
+    "sha256": "8638a696b392cfc5ae33c0a9326698a2004184914e2d55d0feea299efbf9e32b",
+    "transformation": "VP9/WebM compatibility transcode; frames, dimensions and timing preserved."
+  },
+  {
+    "asset": "assets/images/pan-counterclockwise-yellow.webp",
+    "source": "assets/videos/edit_pan_counterclockwise_yellow.mp4",
+    "transformation": "Still at 0.4s, resized to 960px wide without cropping or content edits.",
+    "sha256": "74f45e523afcc71aed92d29dfd92af8784b86c59c1979bdc06135a08a8ef0c1f"
+  },
+  {
+    "asset": "assets/videos/edit_pan_outside_in_yellow.mp4",
+    "source": "assets/pan-render-manifest.json",
+    "sha256": "7d2dedf6df27fdcef2ac2867ab50e7815d10720787ed921f88451b92de873434",
+    "transformation": "Full Blender Cycles CPU material-only rerender from the exact original human/object sources: humoto__sideplate #FAEBCB; all motion, topology, camera, lighting, 8 samples, 70 frames and 30fps preserved. Source fingerprints and renderer audit are in the manifest."
+  },
+  {
+    "asset": "assets/videos/edit_pan_outside_in_yellow.webm",
+    "source": "assets/videos/edit_pan_outside_in_yellow.mp4",
+    "sha256": "bc1e94c5b9be21b6fee2f4f8d8629ec0ddaddadc5b65a08607749ed0bd5548f7",
+    "transformation": "VP9/WebM compatibility transcode; frames, dimensions and timing preserved."
+  },
+  {
+    "asset": "assets/images/pan-outside-in-yellow.webp",
+    "source": "assets/videos/edit_pan_outside_in_yellow.mp4",
+    "transformation": "Still at 0.4s, resized to 960px wide without cropping or content edits.",
+    "sha256": "bd22dced32179a5dd0c2f4ef423b223aaa6110fe7585ae106503e8854b89c5e5"
+  },
+  {
+    "asset": "assets/videos/edit_tennis_down.mp4",
+    "source": "../supplement/assets/videos/edit_tennis_down.mp4",
+    "sha256": "aa2169defc2e3b32772b7368cfa65a082073f1c6a2e6f88a4a6414f7cf7e410a",
+    "transformation": "none"
+  },
+  {
+    "asset": "assets/videos/edit_tennis_down.webm",
+    "source": "assets/videos/edit_tennis_down.mp4",
+    "sha256": "bbfdaee70ad01aded69799afe6830708af17f98970c13351166b6502ae9777ff",
+    "transformation": "VP9/WebM compatibility transcode; frames, dimensions and timing preserved."
+  },
+  {
+    "asset": "assets/images/tennis-down.webp",
+    "source": "assets/videos/edit_tennis_down.mp4",
+    "transformation": "Still at 0.4s, resized to 960px wide without cropping or content edits."
+  },
+  {
+    "asset": "assets/data/mesh-webgl-data.js",
+    "source": "tools/export_mesh_data.py",
+    "sha256": "47d7cdcc66703584c69a00376cc8d02f7dfb3c352ee3c81a56d0c4bceee9a566",
+    "transformation": "Exact staged NPZ mesh export: same 30 uniformly sampled source human/object frames; original observed and completed face partitions, no inferred geometry; source durations and sequence fingerprints retained; explicit 4-second overview playback metadata.",
+    "source_sequences": [
+      "presentation_assets/handcentric_body_completion_selected_videos_20260921/taco_dust_brush_cup/stage_96",
+      "presentation_assets/handcentric_body_completion_oakink2_selected_1_4_20260921/01_put_flower_into_vase/stage_original_616",
+      "presentation_assets/handcentric_body_completion_oakink2_selected_1_4_20260921/04_place_inside/stage_original_870"
+    ]
+  },
+  {
+    "asset": "assets/videos/teaser_tray_wide.mp4",
+    "source": "assets/wide-render-manifest.json",
+    "sha256": "9285532e24b679ffa07bae5b65ba6a6e27337a15bc78a93a2c8bda75d21d8904",
+    "transformation": "Native Blender scene rerender from unchanged source meshes/trajectories. Teasers preserve original vertical view and timing; roles retain raw natural gait with pelvis-follow camera. No video crop or padding. See audited frame ranges/projection/quality."
+  },
+  {
+    "asset": "assets/videos/teaser_tray_wide.webm",
+    "source": "assets/videos/teaser_tray_wide.mp4",
+    "sha256": "e3034e23f54b38dedaae28dd33346380670d3901a419a6949c299940173f6f96",
+    "transformation": "VP9/WebM compatibility encode of the same native frames, dimensions and timing; no crop, padding or trajectory edit."
+  },
+  {
+    "asset": "assets/images/teaser-tray-wide.webp",
+    "source": "assets/videos/teaser_tray_wide.mp4",
+    "sha256": "6430b8daf7881d4008775441af6a9bf3ff6c10b41f05cf8ed284cb5b2d58ce88",
+    "transformation": "Still at0.4s, resized to960px wide; aspect/view preserved."
+  },
+  {
+    "asset": "assets/videos/teaser_kick_wide.mp4",
+    "source": "assets/wide-render-manifest.json",
+    "sha256": "8e2afd009a014f2a77d5ee7a5358a6721d568cb73d9d6425de26435cb02d8093",
+    "transformation": "Native Blender scene rerender from unchanged source meshes/trajectories. Teasers preserve original vertical view and timing; roles retain raw natural gait with pelvis-follow camera. No video crop or padding. See audited frame ranges/projection/quality."
+  },
+  {
+    "asset": "assets/videos/teaser_kick_wide.webm",
+    "source": "assets/videos/teaser_kick_wide.mp4",
+    "sha256": "ec9c47608f6ec9b8558545b4314fe6ea54ff0403295691584ea8fdd7fa769cf8",
+    "transformation": "VP9/WebM compatibility encode of the same native frames, dimensions and timing; no crop, padding or trajectory edit."
+  },
+  {
+    "asset": "assets/images/teaser-kick-wide.webp",
+    "source": "assets/videos/teaser_kick_wide.mp4",
+    "sha256": "2e4a36bfffa2540c23f62f76b36de981c075629a234cfb5aced848f26426c7ec",
+    "transformation": "Still at0.4s, resized to960px wide; aspect/view preserved."
+  },
+  {
+    "asset": "assets/videos/teaser_tea_wide.mp4",
+    "source": "assets/wide-render-manifest.json",
+    "sha256": "fb093c458a7d397add250d5769a0a403339b56ba186b3ebe887003fbcc7fd0ba",
+    "transformation": "Native Blender scene rerender from unchanged source meshes/trajectories. Teasers preserve original vertical view and timing; roles retain raw natural gait with pelvis-follow camera. No video crop or padding. See audited frame ranges/projection/quality."
+  },
+  {
+    "asset": "assets/videos/teaser_tea_wide.webm",
+    "source": "assets/videos/teaser_tea_wide.mp4",
+    "sha256": "e407635c7e024be5b4549ab0aaafaf78c756de8872a1e6abe9a0ddf77afd160d",
+    "transformation": "VP9/WebM compatibility encode of the same native frames, dimensions and timing; no crop, padding or trajectory edit."
+  },
+  {
+    "asset": "assets/images/teaser-tea-wide.webp",
+    "source": "assets/videos/teaser_tea_wide.mp4",
+    "sha256": "a859533adc57c0cb0818a61300b7292d43598f39e65b51128673cffc8eddce84",
+    "transformation": "Still at0.4s, resized to960px wide; aspect/view preserved."
+  },
+  {
+    "asset": "assets/paper-abstract.json",
+    "source": "../_ICLR2027__Multi_object_Interaction-6.pdf",
+    "sha256": "cc9b694f9e77fd708901f1024ade4c072591c8a3dfa41b80f16370b67b81db53",
+    "transformation": "Page1 abstract with PDF hash and extraction normalization; no paraphrase."
+  },
+  {
+    "asset": "assets/videos/roles_intro_checker.mp4",
+    "source": "assets/wide-render-manifest.json",
+    "sha256": "21705fc666732698b33c4e65f7082dcf2db30035b5ba28a1e90e4487ef0b4af3",
+    "transformation": "Native1620\u00d7780 originaldarkchecker/frontscene rerender. Complete original lift/extended lead; audited derived C1 periodic presentation, commonZ grounding and1m staticcheckerphase wrap. Not a new model inference or unmodified scientific rollout; originals preserved."
+  },
+  {
+    "asset": "assets/videos/roles_intro_checker.webm",
+    "source": "assets/videos/roles_intro_checker.mp4",
+    "sha256": "7aa2719c17bb7a0ab861b37b26cc62d836381f9923dd9d9af061aca295568127",
+    "transformation": "VP9/WebM of the same native rendered sequence/dimensions/timing; no crop, padding or additional motion edits."
+  },
+  {
+    "asset": "assets/images/roles-intro-checker.webp",
+    "source": "assets/videos/roles_intro_checker.mp4",
+    "sha256": "b35b5d9b6dbb1d1b01c7324f11ac5b3f2e3adb18bfeb4fd067b17e8ce876b9e1",
+    "transformation": "First-frame native movie poster, resized960px wide; no additional scene/motion changes."
+  },
+  {
+    "asset": "assets/videos/roles_walk_checker.mp4",
+    "source": "assets/wide-render-manifest.json",
+    "sha256": "a7c5e8e69b599aeb27c2fb2506741950c6d05850a25415cc2cc07feaa4ce5b54",
+    "transformation": "Native1620\u00d7780 originaldarkchecker/frontscene rerender. Complete original lift/extended lead; audited derived C1 periodic presentation, commonZ grounding and1m staticcheckerphase wrap. Not a new model inference or unmodified scientific rollout; originals preserved."
+  },
+  {
+    "asset": "assets/videos/roles_walk_checker.webm",
+    "source": "assets/videos/roles_walk_checker.mp4",
+    "sha256": "e831c4495c4735550b07501bf7230b0414ccc2d2f44b585cd56c4b20e774d240",
+    "transformation": "VP9/WebM of the same native rendered sequence/dimensions/timing; no crop, padding or additional motion edits."
+  },
+  {
+    "asset": "assets/images/roles-walk-checker.webp",
+    "source": "assets/videos/roles_walk_checker.mp4",
+    "sha256": "04fa59a8bec36c731290f5d54bd0404fcbe7a1cd31b4595ea3f3f005e1da7f92",
+    "transformation": "First-frame native movie poster, resized960px wide; no additional scene/motion changes."
+  },
+  {
+    "asset": "assets/data/role-anchors.js",
+    "source": "assets/roles-render-manifest.json",
+    "sha256": "5c630036c2b8fea19714ccfa58f2b4bef198562b0e70efe851e52958367c870e",
+    "transformation": "Exact Blender-projected native timeline shoulder/basket/contents anchors;165 intro+45 walking frames, no played closure duplicate."
+  },
+  {
+    "asset": "assets/role-loop-validation.json",
+    "source": "tools/check_role_timeline.py",
+    "sha256": "3a26e49b85e7cbca60f80051570105f5e8fae4d6067cb34ce34c4df9e3bbb5eb",
+    "transformation": "Independent raw-array C0/C1/handoff/supportsole/source-relative-geometry gates plus actual native background seam pixel comparison."
+  }
+]
