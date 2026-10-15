@@ -11,8 +11,10 @@
   }));
   const groupByVideo = new Map(groups.flatMap((group) => group.videos.map((video) => [video, group])));
   const editGroup = groups.find((group) => group.element.id === "edit-player");
+  const processGroup = groups.find((group) => group.element.classList.contains("method-process"));
   const roleGroup = groups.find((group) => group.element.classList.contains("role-movie"));
   let editBatchReady = false;
+  let processBatchReady = false;
   let roleReplaying = false;
 
   function activeVideo(video) {
@@ -22,7 +24,7 @@
   }
   function eligible(video) {
     const group = groupByVideo.get(video);
-    return motionEnabled && !document.hidden && group.visible && activeVideo(video) && (group !== editGroup || editBatchReady) && (group !== roleGroup || !roleReplaying);
+    return motionEnabled && !document.hidden && group.visible && activeVideo(video) && (group !== editGroup || editBatchReady) && (group !== processGroup || processBatchReady) && (group !== roleGroup || !roleReplaying);
   }
   function mediaMessage(video, message) {
     const status = video.parentElement.querySelector(".media-error");
@@ -132,6 +134,10 @@
     preparation.set(video, pending);
     return pending;
   }
+  Promise.allSettled(processGroup.videos.map(prepare)).then(() => {
+    processBatchReady = true;
+    refreshGroup(processGroup);
+  });
   async function resetForReplay(video) {
     await prepare(video);
     video.pause();
@@ -212,14 +218,20 @@
       const videos = group.videos.filter(activeVideo);
       button.disabled = true;
       if (group === editGroup) editBatchReady = false;
+      if (group === processGroup) processBatchReady = false;
       try {
         if (group === roleGroup) await replayRoleScene();
         else await Promise.all(videos.map(resetForReplay));
         if (group === editGroup) editBatchReady = true;
+        if (group === processGroup) processBatchReady = true;
         setMotion(true, true);
         refreshGroup(group);
       } catch (error) { videos.forEach((video) => mediaMessage(video, error.message)); }
-      finally { if (group === editGroup) editBatchReady = true; button.disabled = false; }
+      finally {
+        if (group === editGroup) editBatchReady = true;
+        if (group === processGroup) processBatchReady = true;
+        button.disabled = false;
+      }
     });
   });
 
@@ -293,47 +305,6 @@
     }
   });
   if (roleIntro.readyState >= 2) prepare(roleWalk).catch((error) => mediaMessage(roleWalk, error.message));
-
-  const stageDeck = new VideoDeck($("#stage-deck"));
-  const stageButtons = $$("[data-stage]");
-  let stageRequest = 0;
-  async function selectStage(button) {
-    const ticket = ++stageRequest;
-    const key = button.dataset.stage;
-    $("#stage-status").textContent = "Preparing this generation stage…";
-    stageDeck.element.setAttribute("aria-busy", "true");
-    try {
-      const video = await prepare(stageDeck.video(key));
-      if (ticket !== stageRequest) return;
-      await resetForReplay(video);
-      if (ticket !== stageRequest) return;
-      stageDeck.commit(key);
-      stageButtons.forEach((item) => {
-        const active = item === button;
-        item.classList.toggle("is-active", active);
-        item.setAttribute("aria-selected", String(active));
-        item.tabIndex = active ? 0 : -1;
-      });
-      $("#stage-caption").textContent = `${$(".stage-number", button).firstChild.textContent.trim()} · ${$("strong", button).textContent}`;
-      $("#stage-status").textContent = "";
-      refreshPlayback();
-    } catch (error) {
-      if (ticket === stageRequest) $("#stage-status").textContent = error.message;
-    } finally {
-      if (ticket === stageRequest) stageDeck.element.setAttribute("aria-busy", "false");
-    }
-  }
-  stageButtons.forEach((button, index) => {
-    button.addEventListener("click", () => selectStage(button));
-    button.addEventListener("keydown", (event) => {
-      const keys = { ArrowRight: (index + 1) % 3, ArrowLeft: (index + 2) % 3, Home: 0, End: 2 };
-      if (!(event.key in keys)) return;
-      event.preventDefault();
-      const next = stageButtons[keys[event.key]];
-      next.focus();
-      selectStage(next);
-    });
-  });
 
   const samplePanels = $$("[data-edit-panel]");
   const sampleButtons = $$("[data-edit-sample]");

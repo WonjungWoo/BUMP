@@ -87,7 +87,8 @@ h3 { font-size: 17px; font-weight: 600; line-height: 1.4; letter-spacing: -.015e
 .method-figure { padding: 18px 0 0; }
 .method-figure img { display: block; width: 100%; height: auto; }
 .method-figure figcaption { margin: 18px auto 0; text-align: center; color: var(--muted); font-size: var(--font-size-min); line-height: 1.6; }
-.method-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 37px; }
+.method-process { margin-top: 37px; }
+.method-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .method-step { padding-top: 20px; border-top: 1px solid var(--line); }
 .stage-number { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: var(--font-size-min); line-height: 1.4; min-height: 32px; margin-bottom: 12px; }
 .stage-number > span { display: inline-flex; align-items: center; justify-content: center; min-height: 32px; border: 1px solid #e4e5e9; border-radius: 4px; padding: 3px 7px; background: #fafafa; font-size: var(--font-size-min); }
@@ -130,11 +131,12 @@ h3 { font-size: 17px; font-weight: 600; line-height: 1.4; letter-spacing: -.015e
 .role-callout > span { display: block; margin-top: 3px; font-size: var(--font-size-min); }
 .role-callout small { display: block; margin-top: 3px; font-size: var(--font-size-min); color: #fff; }
 .method-step { display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; text-align: left; border: 1px solid var(--line); border-radius: 8px; background: white; padding: 18px; }
-.method-step:hover { background: #fafbfc; }
-.method-step.is-active { border-color: #9fa8b7; background: #fafbfc; }
+.method-stage { display: flex; min-width: 0; flex-direction: column; }
+.method-stage .method-step { flex: 1; }
 .method-step > strong { display: block; font-size: 17px; font-weight: 600; }
 .stage-description { display: block; margin-top: 10px; font-size: var(--font-size-min); color: var(--muted); line-height: 1.65; }
-.process-player { max-width: 740px; margin: 24px auto 0; }
+.process-player { margin-top: 14px; }
+.process-actions { display: flex; justify-content: flex-end; margin-top: 10px; }
 .dataset-actions { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; align-items: center; margin-bottom: 17px; }
 .dataset-actions .role-legend { font-size: var(--font-size-min); color: var(--muted); }
 .sample-selector { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 21px; }
@@ -179,7 +181,8 @@ h3 { font-size: 17px; font-weight: 600; line-height: 1.4; letter-spacing: -.015e
   .section-heading > p:last-child:not(.eyebrow) { font-size: var(--font-size-min); }
   .role-grid, .method-grid { grid-template-columns: 1fr; }
   .method-figure { padding-top: 0; }
-  .method-grid { gap: 23px; margin-top: 29px; }
+  .method-process { margin-top: 29px; }
+  .method-grid { gap: 23px; }
   .abstract-text { font-size: var(--font-size-min); line-height: 1.8; }
   .citation-section { padding-top: 43px; }
   .footer { margin-top: 45px; font-size: var(--font-size-min); }
