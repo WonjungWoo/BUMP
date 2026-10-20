@@ -174,8 +174,8 @@
   }
 
   const teaserDeck = new VideoDeck($("#teaser-deck"));
-  const teaserKeys = ["tea", "kick", "tray"];
-  const teaserNames = { tray: "Carry a tray", kick: "Kick a basket", tea: "Pour tea" };
+  const teaserKeys = ["tea", "kick", "domino", "tray"];
+  const teaserNames = { tray: "Carry a tray", domino: "Topple dominoes", kick: "Kick a basket", tea: "Pour tea" };
   let teaserIndex = 0;
   let requestedTeaserIndex = 0;
   let teaserRequest = 0;
@@ -194,7 +194,7 @@
       teaserDeck.commit(key);
       teaserIndex = nextIndex;
       $("#teaser-label").textContent = teaserNames[key];
-      $("#teaser-count").textContent = `${String(teaserKeys.indexOf(key) + 1).padStart(2, "0")} / 03`;
+      $("#teaser-count").textContent = `${String(teaserKeys.indexOf(key) + 1).padStart(2, "0")} / ${String(teaserKeys.length).padStart(2, "0")}`;
       $("[data-teaser-driver]").hidden = key === "kick";
       $("#teaser-status").textContent = "";
       refreshPlayback();
