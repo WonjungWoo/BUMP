@@ -354,4 +354,17 @@
   sampleButtons.forEach((button) => button.addEventListener("click", () => selectEditSample(button.dataset.editSample)));
   selectEditSample("pan");
 
+  const bibtexCopy = $("#bibtex-copy");
+  const bibtexEntry = $("#bibtex-entry");
+  bibtexCopy.addEventListener("click", async () => {
+    const label = bibtexCopy.textContent;
+    try {
+      await navigator.clipboard.writeText(bibtexEntry.textContent.trim());
+      bibtexCopy.textContent = "Copied";
+    } catch {
+      bibtexCopy.textContent = "Copy failed";
+    }
+    setTimeout(() => { bibtexCopy.textContent = label; }, 1600);
+  });
+
 })();

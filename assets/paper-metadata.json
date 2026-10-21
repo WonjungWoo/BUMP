@@ -30,5 +30,14 @@
     "https://www.sshowbiz.xyz/"
   ],
   "homepages_verified": "2026-10-12",
-  "publication_status": "Details pending; no venue, year or paper URL invented."
+  "publication_status": "arXiv preprint",
+  "publication": {
+    "year": 2026,
+    "arxiv_id": "2610.27066",
+    "arxiv_url": "https://arxiv.org/abs/2610.27066",
+    "pdf_url": "https://arxiv.org/pdf/2610.27066",
+    "doi": "10.48550/arXiv.2610.27066",
+    "primary_class": "cs.CV",
+    "verified": "2026-10-21"
+  }
 }

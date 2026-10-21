@@ -103,7 +103,8 @@ h3 { font-size: 17px; font-weight: 600; line-height: 1.4; letter-spacing: -.015e
 .citation-section { max-width: 800px; margin: 0 auto; padding-top: 60px; }
 .citation-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .citation-heading h2 { font-size: 25px; }
-.citation-placeholder { margin-top: 18px; }
+.citation-code { margin: 18px 0 0; padding: 18px 20px; overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--soft); color: #434c5c; font: 14px/1.65 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; white-space: pre; }
+.citation-code code { font: inherit; }
 .copy-button { display: inline-flex; align-items: center; gap: 7px; padding: 7px 12px; min-height: 36px; border: 1px solid var(--line); border-radius: 6px; background: white; color: #525b6b; font-size: var(--font-size-min); }
 .copy-button:hover { background: var(--soft); }
 .footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 26px 0 31px; margin-top: 65px; border-top: 1px solid var(--line); font-size: var(--font-size-min); color: var(--muted); }
