@@ -13,8 +13,10 @@
   const editGroup = groups.find((group) => group.element.id === "edit-player");
   const processGroup = groups.find((group) => group.element.classList.contains("method-process"));
   const roleGroup = groups.find((group) => group.element.classList.contains("role-movie"));
+  const teaserGroup = groups.find((group) => group.element.classList.contains("teaser"));
   let editBatchReady = false;
   let processBatchReady = false;
+  let teaserBatchReady = false;
   let roleReplaying = false;
 
   function activeVideo(video) {
@@ -24,7 +26,7 @@
   }
   function eligible(video) {
     const group = groupByVideo.get(video);
-    return motionEnabled && !document.hidden && group.visible && activeVideo(video) && (group !== editGroup || editBatchReady) && (group !== processGroup || processBatchReady) && (group !== roleGroup || !roleReplaying);
+    return motionEnabled && !document.hidden && group.visible && activeVideo(video) && (group !== editGroup || editBatchReady) && (group !== processGroup || processBatchReady) && (group !== teaserGroup || teaserBatchReady) && (group !== roleGroup || !roleReplaying);
   }
   function mediaMessage(video, message) {
     const status = video.parentElement.querySelector(".media-error");
@@ -138,6 +140,10 @@
     processBatchReady = true;
     refreshGroup(processGroup);
   });
+  Promise.allSettled(teaserGroup.videos.map(prepare)).then(() => {
+    teaserBatchReady = true;
+    refreshGroup(teaserGroup);
+  });
   async function resetForReplay(video) {
     await prepare(video);
     video.pause();
@@ -173,44 +179,6 @@
     }
   }
 
-  const teaserDeck = new VideoDeck($("#teaser-deck"));
-  const teaserKeys = ["tea", "kick", "domino", "tray"];
-  const teaserNames = { tray: "Carry a tray", domino: "Topple dominoes", kick: "Kick a basket", tea: "Pour tea" };
-  let teaserIndex = 0;
-  let requestedTeaserIndex = 0;
-  let teaserRequest = 0;
-  async function selectTeaser(index) {
-    const nextIndex = (index + teaserKeys.length) % teaserKeys.length;
-    requestedTeaserIndex = nextIndex;
-    const key = teaserKeys[nextIndex];
-    const ticket = ++teaserRequest;
-    teaserDeck.element.setAttribute("aria-busy", "true");
-    $("#teaser-status").textContent = "Preparing this example…";
-    try {
-      const video = await prepare(teaserDeck.video(key));
-      if (ticket !== teaserRequest) return;
-      await resetForReplay(video);
-      if (ticket !== teaserRequest) return;
-      teaserDeck.commit(key);
-      teaserIndex = nextIndex;
-      $("#teaser-label").textContent = teaserNames[key];
-      $("#teaser-count").textContent = `${String(teaserKeys.indexOf(key) + 1).padStart(2, "0")} / ${String(teaserKeys.length).padStart(2, "0")}`;
-      $("[data-teaser-driver]").hidden = key === "kick";
-      $("#teaser-status").textContent = "";
-      refreshPlayback();
-    } catch (error) {
-      if (ticket === teaserRequest) {
-        requestedTeaserIndex = teaserIndex;
-        $("#teaser-status").textContent = error.message;
-      }
-    }
-    finally { if (ticket === teaserRequest) teaserDeck.element.setAttribute("aria-busy", "false"); }
-  }
-  $$("[data-teaser-step]").forEach((button) => {
-    button.hidden = false;
-    button.addEventListener("click", () => selectTeaser(requestedTeaserIndex + Number(button.dataset.teaserStep)));
-  });
-
   $$("[data-replay]").forEach((button) => {
     button.hidden = false;
     button.addEventListener("click", async () => {
@@ -219,17 +187,20 @@
       button.disabled = true;
       if (group === editGroup) editBatchReady = false;
       if (group === processGroup) processBatchReady = false;
+      if (group === teaserGroup) teaserBatchReady = false;
       try {
         if (group === roleGroup) await replayRoleScene();
         else await Promise.all(videos.map(resetForReplay));
         if (group === editGroup) editBatchReady = true;
         if (group === processGroup) processBatchReady = true;
+        if (group === teaserGroup) teaserBatchReady = true;
         setMotion(true, true);
         refreshGroup(group);
       } catch (error) { videos.forEach((video) => mediaMessage(video, error.message)); }
       finally {
         if (group === editGroup) editBatchReady = true;
         if (group === processGroup) processBatchReady = true;
+        if (group === teaserGroup) teaserBatchReady = true;
         button.disabled = false;
       }
     });
